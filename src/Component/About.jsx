@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaRegDotCircle } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -17,16 +18,25 @@ const About = () => {
                  encounter consequences that are extremely </p>
 
                  <ol className='mb-5'>
-                    <li className='flex text-[20px] mb-2'> <span className="pt-2 mr-2 text-yellow-500"><FaRegDotCircle /></span>Builds Aerobic power</li>
-                    <li className='flex text-[20px] mb-2'> <span className="pt-2 mr-2 text-yellow-500"><FaRegDotCircle /></span>Strong Body Structure</li>
-                    <li className='flex text-[20px] mb-2'> <span className="pt-2 mr-2 text-yellow-500"><FaRegDotCircle  /></span>Boots your Memory</li>
-                    <li className='flex text-[20px] mb-2'> <span className="pt-2 mr-2 text-yellow-500"><FaRegDotCircle /></span>Brngs about restful Sleep</li>
+                    <li className='flex text-[18px] mb-2 '> <span className="pt-[5px] mr-2 text-yellow-500"><FaRegDotCircle /></span>Builds Aerobic power</li>
+                    <li className='flex text-[18px] mb-2'> <span className="pt-[5px] mr-2 text-yellow-500"><FaRegDotCircle /></span>Strong Body Structure</li>
+                    <li className='flex text-[18px] mb-2'> <span className="pt-[5px] mr-2 text-yellow-500"><FaRegDotCircle  /></span>Boots your Memory</li>
+                    <li className='flex text-[18px] mb-2'> <span className="pt-[5px] mr-2 text-yellow-500"><FaRegDotCircle /></span>Brngs about restful Sleep</li>
                  </ol>
 
                  <div className="btn mt-6">
                     <button className='w-[50%] text-white font-semibold text-[18px] uppercase
                      my-[1.2rem] rounded-[30px] bg-yellow-500 py-3'>Let start</button>
                  </div>
+
+                 <section className="watchVid flex space-x-2 ">
+                    <span className="vidBorder flex  items-center justify-center border-4 border-l-4 border-t-4 border-b-4 border-t-yellow-500 border-b-yellow-500 border-l-yellow-500 border-slat-500 w-[3rem] h-[3rem] rounded-full">
+
+                  
+                    <FaPlay /> 
+                    </span>
+                    <span className=' uppercase block text-[20px] s font-semibold pt-2'>Intro video</span>
+                 </section>
         </figcaption>
         <div className="abtContainer">
             <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/gallery/g1.png"
