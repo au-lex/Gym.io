@@ -30,7 +30,7 @@ const HeroCo = () => {
     
 <div className="btn flex justify-center my-[2rem]">
 
-    <button className='border-2 border-yellow-500 text-slate-200 rounded-[50px] text-[1.5rem] w-[60%] p-4 '>Gym Now</button>
+    <button className='border-2 border-yellow-500 text-slate-200 rounded-[50px] text-[1.5rem] w-[60%] p-3 '>Gym Now</button>
 </div>
 
     <div>
