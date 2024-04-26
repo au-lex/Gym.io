@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
     
-    <section className="header bg-[#1F1F1F] shadow-md fixed w-full h-[4.5rem] p-3  " >
+    <section className="header bg-[#1F1F1F] z-50 shadow-md fixed w-full h-[4.5rem] p-3  " >
 
         <section className="headerControll flex  justify-between items-center">
 
