@@ -12,7 +12,7 @@ const About = () => {
 
         <h1 className='text-[2rem]    text-yellow-500 font-bold uppercase s'>
           <span className=' text-slate-900'>Best </span> Equipment <br /> & fitness
-           <span className='text-slate-900'>trainers</span> </h1>
+           <span className='text-slate-900'>  trainers</span> </h1>
             <p>Gym is very important to maintain our health luptas sit fugit,
                  sed quia cuuntur magni dolores eos qui rat ione volupta pleasure rationally 
                  encounter consequences that are extremely </p>
