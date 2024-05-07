@@ -38,31 +38,31 @@ alt="" />
 {/* mobilenavbar======== */}
 <section className={`fixed w-full menu ${openNav ? "active" : ""} h-screen pt-5 left-0 right-0 top-[4.5rem]`} >
 
-  <a href="/" className='blck flex items-center py-3 px-4 mb-3 text-yellow-400 hover:text-white transition-colors'>
+  <a href="/" className='blck flex items-center py-3 px-4 mb-3 text-white hover:text-white transition-colors'>
     <FaHome className="mr-2" size={20} />
-    <span className="font-bold">Home</span>
+    <span className="fontbold text-[20px]">Home</span>
   </a>
 
-  <a href="/shop" className='blok flex items-center  mb-3 py-3 px-4 text-yellow-400 hover:text-white transition-colors'>
+  <a href="/shop" className='blok flex items-center  mb-3 py-3 px-4 text-white hover:text-white transition-colors'>
     <FaShoppingCart className="mr-2" size={20} />
-    <span className="font-bold">Shop</span>
+    <span className="fontbold text-[20px]">Shop</span>
   </a>
 
-  <a href="/exercise" className='blok flex items-center  mb-3 py-3 px-4 text-yellow-400 hover:text-white transition-colors'>
+  <a href="/exercise" className='blok flex items-center  mb-3 py-3 px-4 text-white hover:text-white transition-colors'>
     <FaDumbbell className="mr-2" size={20} />
-    <span className="font-bold">Exercise</span>
+    <span className="fontbold text-[20px]">Exercise</span>
   </a>
 
   <a href="/contact" className='blo
-  ck flex items-center py-3 px-4 text-yellow-400  mb-3 hover:text-white transition-colors'>
+  ck flex items-center py-3 px-4 text-white  mb-3 hover:text-white transition-colors'>
     <FaEnvelope className="mr-2" size={20} />
-    <span className="font-bold">Contact</span>
+    <span className="fontbold text-[20px]">Contact</span>
   </a>
 
   <a href="/about" className='blo
-  ck flex items-center py-3 px-4 text-yellow-400 hover:text-white transition-colors'>
+  ck flex items-center py-3 px-4 text-white hover:text-white transition-colors'>
     <FaInfoCircle className="mr-2" size={20} />
-    <span className="font-bold">About</span>
+    <span className="fontbold  text-[20px]">About</span>
   </a>
 
 </section>
