@@ -10,9 +10,9 @@ const BmiCal = () => {
 
 
         <figure className="img relative">
-            <div className="bg-black  z-30 w-full inset-0  absolute opacity-80"></div>
+            <div className="bg-black  z-20 w-full inset-0  absolute opacity-80"></div>
             <img src={imageUrl} className='w-full h-[600px] object-cover' alt="" />
-            <div className="  z-40 w-full inset-0  absolute ">
+            <div className="  z-30 w-full inset-0  absolute ">
 
 <section className="desc text-center pt-12">
 

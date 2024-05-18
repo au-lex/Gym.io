@@ -7,6 +7,7 @@ import Footer from './Component/Footer'
 import GymBlog from './Component/GymBlog'
 import Header from './Component/Header'
 import HeroCo from './Component/HeroCo'
+import Loader from './Component/Loader'
 import Shop from './Component/Shop'
 
 
@@ -15,6 +16,8 @@ function App() {
 
   return (
  <>
+
+ <Loader />
  <Header/>
  <HeroCo/>
  <About/>
