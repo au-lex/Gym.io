@@ -12,8 +12,8 @@ const Classes = () => {
 
        
     <h1 className='text-[2rem]    text-yellow-500 font-bold uppercase s'>
-          <span className=' text-slate-900'>SPECIFIC </span> CLASSES <br /> WHAT
-           <span className='text-slate-900'>YOU NEEDS</span> </h1>
+          <span className='mx-1 text-slate-900'>SPECIFIC </span> CLASSES <br /> WHAT  
+           <span className='text-slate-900 mx-1'>   YOU NEEDS</span> </h1>
 
            <p className='my-4'>Gym is very important to maintain our health luptas sit fugit, sed quia 
             cuuntur magni dolores eos qui rat ione volupta pleasure rationally 

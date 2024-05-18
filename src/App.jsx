@@ -1,6 +1,7 @@
 
 import './App.css'
 import About from './Component/About'
+import BmiCal from './Component/BmiCal'
 import Classes from './Component/Classes'
 import Footer from './Component/Footer'
 import GymBlog from './Component/GymBlog'
@@ -19,6 +20,8 @@ function App() {
  <About/>
  <Classes />
  <Shop />
+<BmiCal />
+
  <GymBlog />
  <Footer/>
  
