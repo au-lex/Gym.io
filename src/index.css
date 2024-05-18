@@ -19,3 +19,9 @@ left: -30rem;
 }
 
 
+input::placeholder {
+    color: white;
+    font-size: 12px;
+}
+
+
