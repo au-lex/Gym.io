@@ -20,7 +20,7 @@ const Header = () => {
 <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/icons/g1.png"
 className='w-full h-[40px] object-cover'
 alt="" />
-<h2 className ="text-[2rem] text-white font-bold s">GYMMIE</h2>
+<h2 className ="text-[2rem] text-yellow-500 font-bold s">GYMMIE</h2>
 
 </div>
  
