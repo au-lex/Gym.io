@@ -5,6 +5,7 @@ import { FaRegDotCircle } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
 import Loader from '../Component/Loader';
 import Banner from '../Component/Banner';
+import Member from '../Component/Member';
 
 const About = () => {
   const imageUrl = 'https://htmldemo.net/zymzoo/zymzoo/assets/img/photos/bg-page2.jpg';
@@ -98,6 +99,8 @@ sed quia cuuntur magni dolores eos qui rat ione volupta
 
  <Banner />
 </section>
+
+<Member />
         </main>
 
 
