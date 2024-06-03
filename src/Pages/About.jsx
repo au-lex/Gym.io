@@ -3,12 +3,14 @@ import Header from '../Component/Header';
 import Footer from "../Component/Footer"
 import { FaRegDotCircle } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
+import Loader from '../Component/Loader';
+import Banner from '../Component/Banner';
 
 const About = () => {
   const imageUrl = 'https://htmldemo.net/zymzoo/zymzoo/assets/img/photos/bg-page2.jpg';
   return (
     <>
-    
+    <Loader />
     <Header />
     <section className="bmi pt-[4rem]">
 
@@ -35,20 +37,26 @@ sed quia cuuntur magni dolores eos qui rat ione volupta
         </figure>
 
         <main className="abt px-4">
-          <h1>BEST GYM STATION FOR YOU BECAUSE
-WE PROVIDE BEST QUALITY OF EQUIPMENTS
-AS WELL AS INSTRACTORS</h1>
+          <h1>
+
+</h1>
 
 <figure>
-  <div>
-    <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/about/2.png" alt="" />
-  </div>
+<figcaption className="desc space-y-2 text-slate-800 mb-4">
 
-  <figcaption className="desc space-y-2 text-slate-800 mb-4">
+  <p className='mt-[2rem]  tracking-[.3rem] text-yellow-500 text-[12px] '>WELCOME TO GYMMIE</p>
 
-<h1 className='text-[2rem]    text-yellow-500 font-bold uppercase s'>
-  <span className=' text-slate-900'>Best </span> Equipment <br /> & fitness
-   <span className='text-slate-900'>  trainers</span> </h1>
+<h1 className='text-[1.5rem]    text-yellow-500 font-bold uppercase s'>
+  <span className=' text-slate-900'> BEST  </span>  GYM STATION  <span className=' text-slate-900'>FOR <br /> YOU BECAUSE WE PROVIDE <br /></span> 
+  BEST<span className=' text-slate-900'> QUALITY OF <br /></span>EQUIPMENTS
+   <span className='text-slate-900'> AS WELL AS </span>   <br />INSTRACTORS</h1>
+
+
+
+
+
+
+
     <p>Gym is very important to maintain our health luptas sit fugit,
          sed quia cuuntur magni dolores eos qui rat ione volupta pleasure rationally 
          encounter consequences that are extremely </p>
@@ -74,7 +82,22 @@ AS WELL AS INSTRACTORS</h1>
             <span className=' uppercase block text-[20px] s font-semibold pt-2'>Intro video</span>
          </section>
 </figcaption>
+  <div>
+    <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/about/2.png" alt="" />
+  </div>
+
+
 </figure>
+
+
+{/* banner section */}
+
+
+<section className="abtBanner banner">
+
+
+ <Banner />
+</section>
         </main>
 
 

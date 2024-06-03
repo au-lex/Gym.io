@@ -22,3 +22,13 @@
   font-family: "Open Sans", sans-serif;
 
 }
+
+.banner {
+  background-image: url("https://htmldemo.net/zymzoo/zymzoo/assets/img/photos/bg-f2.jpg");
+  width: 100%;
+  height: 38rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+}
