@@ -36,7 +36,7 @@ alt="" />
 
 
 {/* mobilenavbar======== */}
-<section className={`fixed w-full menu ${openNav ? "active" : ""} h-screen pt-5 left-0 right-0 top-[4.5rem]`} >
+<section className={`fixed w-full md:hidden block menu ${openNav ? "active" : ""} h-screen pt-5 left-0 right-0 top-[4.5rem]`} >
 
   <a href="/" className='blck flex items-center py-3 px-4 mb-3 text-white hover:text-white transition-colors'>
     <FaHome className="mr-2" size={20} />
