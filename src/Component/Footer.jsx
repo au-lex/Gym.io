@@ -13,7 +13,7 @@ const Footer = () => {
     <>
     
     
-    <section className="footer mt-[4rem] relative">
+    <section className="footer mt4rem] relative">
         <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/photos/bg-f1.png"
         
         
