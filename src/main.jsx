@@ -13,7 +13,7 @@ import "./index.css";
 import About from "./Pages/About.jsx";
 import Shop from "./Pages/Shop.jsx";
 import Contact from "./Pages/Contact.jsx";
-import Exercise from "./Pages/Exercise.jsx";
+import Exercise from "./Pages/Exercise/Exercise.jsx";
 
 const router = createBrowserRouter([
   {

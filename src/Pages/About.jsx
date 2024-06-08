@@ -21,9 +21,9 @@ const About = () => {
             <img src={imageUrl} className='w-full h-[250px] object-cover' alt="" />
             <div className="  z-30 w-full inset-0  absolute ">
 
-<section className="desc text-center pt-12">
+<section className=" px-[2rem] desc tex-center pt-12">
 
-            <h1 className='text-[2rem]    text-yellow-500 text-center  font-bold uppercase s'>
+            <h1 className='text-[2rem]    text-yellow-500 textcenter  font-bold uppercase s'>
           <span className='mx-1 text-slate-100'> ABOUT   </span>US <br /> 
             </h1>
           <p className='text-white'>Gym is very important to maintain our health luptas sit fugit,
