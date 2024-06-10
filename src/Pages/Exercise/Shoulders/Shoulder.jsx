@@ -6,4 +6,4 @@ const Shoulder = () => {
   )
 }
 
-export default Shoulder
+export default Shoulder;

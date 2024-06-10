@@ -6,4 +6,4 @@ const UpperArms = () => {
   )
 }
 
-export default UpperArms
+export default UpperArms;

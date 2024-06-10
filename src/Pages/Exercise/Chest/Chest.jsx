@@ -6,4 +6,4 @@ const Chest = () => {
   )
 }
 
-export default Chest
+export default Chest;

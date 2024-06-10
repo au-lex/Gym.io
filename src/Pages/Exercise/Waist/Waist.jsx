@@ -6,4 +6,4 @@ const Waist = () => {
   )
 }
 
-export default Waist
+export default Waist;

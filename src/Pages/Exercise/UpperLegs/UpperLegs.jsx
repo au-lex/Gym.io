@@ -6,4 +6,4 @@ const UpperLegs = () => {
   )
 }
 
-export default UpperLegs
+export default UpperLegs;

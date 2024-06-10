@@ -6,4 +6,4 @@ const LowerArms = () => {
   )
 }
 
-export default LowerArms
+export default LowerArms;
