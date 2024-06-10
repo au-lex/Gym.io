@@ -49,8 +49,8 @@ const Exercise = () => {
       <Loader />
       <Header />
 
-      <main className="generalConatiner w-full exerciseDb flex items-center  bg-black h-screen  pt-[6rem]">
-        <section className=" w-full ">
+      <main className="generalConatiner w-full exerciseDb flex items-center  bg-black   pt-[6rem]">
+        <section className=" w-full pb-[2rem] ">
 
         <h1 className='text-[1.2rem]  pl-4   mb-4 text-yellow-500 textcenter  font-bold uppercase s'>
         choose<span className='mx-1 text-slate-100'>  Exercises....  </span> <br /> 
@@ -62,7 +62,7 @@ const Exercise = () => {
               <div className="border-2 border-yellow-500 rounded-[10px] bg-white h-[10rem] overflow-hidden m-2 ">
                
 
-                <figure className="imgCon relative">
+                <figure className="imgCon relative ">
                 <img src={exer.gifUrl} alt="img-exer" 
                 className="w-full h-[156px] rounded-[10px] object-cover"
                 /> 
