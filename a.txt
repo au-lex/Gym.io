@@ -1,0 +1,8 @@
+ {/* <p className="text-gray-600">Instructions:</p> */}
+            {/* <ol className="list-decimal pl-6">
+              {exercise.instructions.map((instruction, instructionIndex) => (
+                <li key={instructionIndex} className="text-gray-700">
+                  {instruction}
+                </li>
+              ))}
+            </ol> */}
