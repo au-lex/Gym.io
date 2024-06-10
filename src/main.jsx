@@ -14,6 +14,14 @@ import About from "./Pages/About.jsx";
 import Shop from "./Pages/Shop.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Exercise from "./Pages/Exercise/Exercise.jsx";
+import Cardio from "./Pages/Exercise/Cardio/Cardio.jsx";
+import Chest from "./Pages/Exercise/Chest/Chest.jsx";
+import LowerArms from "./Pages/Exercise/LowerArms/LowerArms.jsx";
+import LowerLegs from "./Pages/Exercise/LowerLegs/LowerLegs.jsx";
+import Shoulder from "./Pages/Exercise/Shoulders/Shoulder.jsx";
+import UpperArms from "./Pages/Exercise/UpperArms/UpperArms.jsx";
+import UpperLegs from "./Pages/Exercise/UpperLegs/UpperLegs.jsx";
+import Waist from "./Pages/Exercise/Waist/Waist.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +44,61 @@ const router = createBrowserRouter([
     path: "/exercise",
     element: <Exercise/>,
   },
+
+
+  // exercise-cate
+
+
+  {
+    path: "/cardio-exercises",
+    element: <Cardio />
+  },
+
+
+  {
+    path:  "/chest-exercises",
+    element: <Chest />,
+  },
+
+
+  {
+    path: "/lower-arms-exercises",
+    element: <LowerArms/>,
+  },
+
+
+  {
+    path:"/lower-legs-exercises",
+    element: <LowerLegs/>,
+  },
+
+
+  {
+    path: "/shoulders-exercises",
+    element: <Shoulder/>,
+  },
+
+
+  {
+    path: "/upper-arms-exercises",
+    element: <UpperArms/>,
+  },
+
+
+  {
+    path: "/upper-legs-exercises",
+    element: <UpperLegs/>,
+  },
+
+
+  {
+    path:"/waist-exercises",
+    element: <Waist/>,
+  },
+
+
+
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
