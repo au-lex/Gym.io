@@ -22,6 +22,7 @@ import Shoulder from "./Pages/Exercise/Shoulders/Shoulder.jsx";
 import UpperArms from "./Pages/Exercise/UpperArms/UpperArms.jsx";
 import UpperLegs from "./Pages/Exercise/UpperLegs/UpperLegs.jsx";
 import Waist from "./Pages/Exercise/Waist/Waist.jsx";
+import CardioDetails from "./Pages/Exercise/Cardio/CardioDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
   {
     path: "/cardio-exercises",
     element: <Cardio />
+  },
+
+  {
+    path: "/cardioDetails/:id",
+    element: <CardioDetails />
   },
 
 

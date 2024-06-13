@@ -8,42 +8,42 @@ const Exercise = () => {
  const ExerciseList = [
    {
      name: "cardio",
-     gifUrl: "https://v2.exercisedb.io/image/kP7PzqOXAIsfeH",
+     gifUrl: "https://res.cloudinary.com/dytlpvw1o/image/upload/v1718287619/ouOOCV11vN0z1e_gfl8nm.gif",
      routePath: "/cardio-exercises",
    },
    {
      name: "chest",
-     gifUrl: "https://v2.exercisedb.io/image/Bi8xVYeWIyqo56",
+     gifUrl: "https://res.cloudinary.com/dytlpvw1o/image/upload/v1718287771/eBSRTt-i35eDHS_lcnwfm.gif",
      routePath: "/chest-exercises",
    },
    {
      name: "lower arms",
-     gifUrl: "https://v2.exercisedb.io/image/XbgQTNDpKKevml",
+     gifUrl: "https://res.cloudinary.com/dytlpvw1o/image/upload/v1718288046/XF5qObahE4-u50_ywtqfy.gif",
      routePath: "/lower-arms-exercises",
    },
    {
      name: "lower legs",
-     gifUrl: "https://v2.exercisedb.io/image/-EA4vBhetgIhoR",
+     gifUrl: "https://res.cloudinary.com/dytlpvw1o/image/upload/v1718288336/y3i67yU7mtFSJD_ixv2fv.gif",
      routePath: "/lower-legs-exercises",
    },
    {
      name: "shoulders",
-     gifUrl: "https://v2.exercisedb.io/image/ip1CORTGGkf8KC",
+     gifUrl: "https://res.cloudinary.com/dytlpvw1o/image/upload/v1718288470/WtaBe8W1eD4zs8_s3kikt.gif",
      routePath: "/shoulders-exercises",
    },
    {
      name: "upper arms",
-     gifUrl: "https://v2.exercisedb.io/image/hwzS8KCAazlaDM",
+     gifUrl: "https://res.cloudinary.com/dytlpvw1o/image/upload/v1718288603/ZHaTtCgQ7Wkjxz_l41olb.gif",
      routePath: "/upper-arms-exercises",
    },
    {
      name: "upper legs",
-     gifUrl: "https://v2.exercisedb.io/image/vKAWsPzehvwbAa",
+     gifUrl: "https://res.cloudinary.com/dytlpvw1o/image/upload/v1718288779/wNoApkCbJnCrkW_rxdskw.gif",
      routePath: "/upper-legs-exercises",
    },
    {
      name: "waist",
-     gifUrl: "https://v2.exercisedb.io/image/UcvY9fRgNeiV4m",
+     gifUrl: "https://res.cloudinary.com/dytlpvw1o/image/upload/v1718288929/rTpTgyUAivFAc-_bgxex4.gif",
      routePath: "/waist-exercises",
    },
  ];
