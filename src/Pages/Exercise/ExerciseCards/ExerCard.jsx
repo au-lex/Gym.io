@@ -1,9 +1,14 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 const ExerciseCard = ({ exercise }) => {
+
+
+
   return (
-    <div className="mb-3 mx-2 flex space-x-4 border bg-white p-2 rounded-[10px] overflow-hidden">
-      <figure className="imgCon border rounded-[5px] p-2 border-yellow-500">
+    <div className="mb-3 mx-2 flex space-x-4 border bg-white p-1 rounded-[10px] overflow-hidden">
+      <figure className="imgCon border rounded-[5px] p-2 border-yellow-500 shadow-2xl">
         <img
           src={exercise.gifUrl}
           alt="img"
@@ -21,9 +26,9 @@ const ExerciseCard = ({ exercise }) => {
           Secondary Muscles: {exercise.secondaryMuscles.join(', ')}
         </p>
         <div className="btn">
-          <button className="bg-yellow-500 text-white w-full p-2 rounded-[5px]">
+          <Link to={`/cardioDetails/${exercise.id}`} className="bg-yellow-500 block text-center text-white w-full p-2 rounded-[5px]">
             More info..
-          </button>
+          </Link>
         </div>
       </figcaption>
     </div>
