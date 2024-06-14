@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Loader from "../Component/Loader"
 
 const VideoApi = ({ query }) => {
   const [videos, setVideos] = useState([]);
@@ -33,7 +34,7 @@ const VideoApi = ({ query }) => {
   }, [query]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <> <Loader /></>;
   }
 
   if (error) {
@@ -41,21 +42,26 @@ const VideoApi = ({ query }) => {
   }
 
   return (
+
+    <>
+    
+
     <div>
       {videos.length > 0 ? (
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {videos.map((video, index) => (
-            <div key={index} className="block p-2 border rounded-lg shadow-md hover:bg-gray-100">
+            <div key={index} className="block p-1 border ">
               <iframe
                 width="100%"
-                height="315"
+                height="215"
+                
                 src={`https://www.youtube.com/embed/${video.video.videoId}`}
                 title={video.video.title}
-                frameBorder="0"
+          
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
-              <p className="text-gray-800 font-semibold mt-2">{video.video.title}</p>
+              <p className="text-gray-800 text-[12px] mt-2">{video.video.title}</p>
             </div>
           ))}
         </div>
@@ -63,6 +69,12 @@ const VideoApi = ({ query }) => {
         <p>No videos found</p>
       )}
     </div>
+    
+
+
+    
+
+    </>
   );
 };
 
