@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Loader from "../Component/Loader"
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
 
 const VideoApi = ({ query }) => {
   const [videos, setVideos] = useState([]);
@@ -45,34 +49,40 @@ const VideoApi = ({ query }) => {
 
     <>
     
-
     <div>
       {videos.length > 0 ? (
-        <div className="grid grid-cols-2 gap-4">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={20}
+          slidesPerView={1.1}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+        >
           {videos.map((video, index) => (
-            <div key={index} className="block p-1 border ">
-              <iframe
-                width="100%"
-                height="215"
-                
-                src={`https://www.youtube.com/embed/${video.video.videoId}`}
-                title={video.video.title}
-          
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              <p className="text-gray-800 text-[12px] mt-2">{video.video.title}</p>
-            </div>
+            <SwiperSlide key={index}>
+              <div className="block p-1 border">
+                <iframe
+                  width="100%"
+                  height="215"
+                  src={`https://www.youtube.com/embed/${video.video.videoId}`}
+                  title={video.video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                {/* <p className="text-gray-800 text-[12px] mt-2">{video.video.title}</p> */}
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       ) : (
         <p>No videos found</p>
       )}
     </div>
-    
 
 
-    
+   
+ 
 
     </>
   );
