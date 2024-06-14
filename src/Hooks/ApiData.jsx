@@ -18,14 +18,13 @@ const ExerciseData = (endpoint = '') => {
 
       try {
         const response = await fetch(url, options);
-        console.log('Response Status:', response.status); // Log the response status
-
+        console.log('Response Status:', response.status); 
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
 
         const result = await response.json();
-        console.log('Fetched Data:', result); // Log the fetched data
+        console.log('Fetched Data:', result); 
         setData(result);
         setIsLoading(false);
       } catch (err) {
