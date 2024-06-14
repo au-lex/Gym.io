@@ -18,14 +18,20 @@ const ExerciseData = (endpoint = '') => {
 
       try {
         const response = await fetch(url, options);
-        const result = await response.text();
+        console.log('Response Status:', response.status); // Log the response status
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const result = await response.json();
+        console.log('Fetched Data:', result); // Log the fetched data
         setData(result);
         setIsLoading(false);
-        console.log('Fetched data:', result); 
       } catch (err) {
+        console.error('Error fetching data:', err);
         setError(err);
         setIsLoading(false);
-        console.error('Error fetching data:', err); 
       }
     };
 
@@ -36,5 +42,3 @@ const ExerciseData = (endpoint = '') => {
 };
 
 export default ExerciseData;
-
-
