@@ -52,16 +52,14 @@ const VideoApi = ({ query }) => {
     <div>
       {videos.length > 0 ? (
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={20}
           slidesPerView={1.1}
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-          }}
+          onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
         >
           {videos.map((video, index) => (
             <SwiperSlide key={index}>
