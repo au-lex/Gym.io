@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loader from "../Component/Loader"
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -52,12 +52,16 @@ const VideoApi = ({ query }) => {
     <div>
       {videos.length > 0 ? (
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={20}
           slidesPerView={1.1}
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
         >
           {videos.map((video, index) => (
             <SwiperSlide key={index}>
@@ -81,7 +85,7 @@ const VideoApi = ({ query }) => {
     </div>
 
 
-   
+    
  
 
     </>
