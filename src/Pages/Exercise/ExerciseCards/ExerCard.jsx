@@ -26,9 +26,13 @@ const ExerciseCard = ({ exercise }) => {
           Secondary Muscles: {exercise.secondaryMuscles.join(', ')}
         </p>
         <div className="btn">
-          <Link to={`/cardioDetails/${exercise.id}`} className="bg-yellow-500 block text-center text-white w-full p-2 rounded-[5px]">
-            More info..
-          </Link>
+        <Link
+  to={`/cardioDetails/${exercise.id}`}
+  className="bg-yellow-500 block text-center text-white w-full p-2 rounded-[5px]"
+>
+  More info..
+</Link>
+
         </div>
       </figcaption>
     </div>
