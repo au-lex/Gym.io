@@ -2,6 +2,9 @@ import React from 'react'
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { FaShoppingCart } from 'react-icons/fa';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../Redux/cartSlice';
+
 
 
 const StarRating = ({ rating }) => {
@@ -23,6 +26,14 @@ const StarRating = ({ rating }) => {
 
 
 const Shop = () => {
+
+  const dispatch = useDispatch();
+
+  const cart = useSelector(state => state.cart);
+  
+  const handleAddToCart = (item) => {
+    dispatch(addToCart(item));
+  };
     
 const ExercItems = [
 
@@ -114,7 +125,7 @@ our health luptas sit fugit, sed quia cuuntur magni dolores some products</p>
 
   
 
-    <button  className=" bg-yellow-500  w-[30%] flex justify-center items-center text-white rounded-[4px] h-[1.5rem]">
+    <button  onClick={() => handleAddToCart(shop)}  className=" bg-yellow-500  w-[30%] flex justify-center items-center text-white rounded-[4px] h-[1.5rem]">
                  <FaShoppingCart className="ml-2 " />
               </button>
     

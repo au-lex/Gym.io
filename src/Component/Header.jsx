@@ -30,9 +30,9 @@ alt="" />
 
 </div>
  
-<Link to ="/cart" className="cart-icon block bg-white">
-        <FaShoppingCart />
-        <span>{cartItemCount}</span>
+<Link to ="/cart" className="cart-icon flex  ">
+        <FaShoppingCart   className='text-yellow-500 text-[1.6rem]' />
+        <span className=' text-white bg-red-500 p-3 ml-[-.2rem] rounded-full h-[1rem] w-[1rem] flex justify-center items-center'>{cartItemCount}</span>
       </Link>
 
 <div className="meuebar">
@@ -41,10 +41,7 @@ alt="" />
 
 {/* mobilenavbar======== */}
 
-{/* mobilenavbar======== */}
 
-
-{/* mobilenavbar======== */}
 <section className={`fixed w-full md:hidden block menu ${openNav ? "active" : ""} h-screen pt-5 left-0 right-0 top-[4.5rem]`} >
 
   <a href="/" className='blck flex items-center py-3 px-4 mb-3 text-white hover:text-white transition-colors'>
