@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import Loader from "../Component/Loader"
+import Loader from "../Component/Loader";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
+// Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/navigation';
+
+// Import custom CSS
+
 
 const VideoApi = ({ query }) => {
   const [videos, setVideos] = useState([]);
@@ -46,46 +52,48 @@ const VideoApi = ({ query }) => {
   }
 
   return (
-
     <>
-    
-    <div>
-      {videos.length > 0 ? (
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={20}
-          slidesPerView={1.1}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-        >
-          {videos.map((video, index) => (
-            <SwiperSlide key={index}>
-              <div className="block p-1 border">
-                <iframe
-                  width="100%"
-                  height="215"
-                  src={`https://www.youtube.com/embed/${video.video.videoId}`}
-                  title={video.video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-                {/* <p className="text-gray-800 text-[12px] mt-2">{video.video.title}</p> */}
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      ) : (
-        <p>No videos found</p>
-      )}
-    </div>
-
-
-    
- 
-
+      <div className="relative">
+        {videos.length > 0 ? (
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation={{
+              nextEl: '.swiper-button-next-custom',
+              prevEl: '.swiper-button-prev-custom',
+            }}
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+          >
+            {videos.map((video, index) => (
+              <SwiperSlide key={index}>
+                <div className="block p-1 border">
+                  <iframe
+                    width="100%"
+                    height="215"
+                    src={`https://www.youtube.com/embed/${video.video.videoId}`}
+                    title={video.video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                  {/* <p className="text-gray-800 text-[12px] mt-2">{video.video.title}</p> */}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <p>No videos found</p>
+        )}
+        <div className="swiper-button-next-custom">
+          <FaArrowRight />
+        </div>
+        <div className="swiper-button-prev-custom">
+          <FaArrowLeft />
+        </div>
+      </div>
     </>
   );
 };

@@ -36,3 +36,50 @@
 .price {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+
+
+/* customSwiperStyles.css */
+
+.relative {
+  position: relative;
+}
+
+.swiper-button-next-custom,
+.swiper-button-prev-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10; /* Ensure buttons are above the video */
+}
+
+.swiper-button-next-custom {
+  right: 10px; /* Adjust positioning as needed */
+}
+
+.swiper-button-prev-custom {
+  left: 10px; /* Adjust positioning as needed */
+}
+
+.swiper-button-next-custom:hover,
+.swiper-button-prev-custom:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+.swiper-button-next-custom svg,
+.swiper-button-prev-custom svg {
+  width: 20px; /* Adjust icon width as needed */
+  height: 20px; /* Adjust icon height as needed */
+}
+
+
+
