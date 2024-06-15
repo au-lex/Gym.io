@@ -1,6 +1,40 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const BmiCal = () => {
+
+  const [Weight, setWeight] = useState("");
+  const [Height, setHeight] = useState("");
+  const [Bmi, setBmi] = useState("");
+  const [Status, setStatus] = useState("");
+
+
+
+  // const calculateBMi = () => {
+  //   const height_in_Meters = Height/100;
+  //   const bmiValue = (Weight/(height_in_Meters * height_in_Meters)).toFixed(2);
+  //   setBmi(bmiValue);
+  //   if (bmiValue < 18.5) setStatus("UnderWeight");
+  //   else if (bmiValue >= 18.5 && bmiValue < 25); setStatus("Normal");
+  //   else if (bmiValue >= 25 && bmiValue < 30); setStatus("OverWeight");
+  //   else setStatus("OverWeight")
+  // }
+
+  const calculateBMi = () => {
+
+    if (Weight <= 0 || Height <= 0) {
+      alert("Please enter valid weight and height");
+      return;
+    }
+
+    const height_in_Meters = Height/100;
+    const bmiValue = (Weight/(height_in_Meters * height_in_Meters)).toFixed(2);
+    setBmi(bmiValue);
+    if (bmiValue < 18.5) setStatus("UnderWeight");
+    else if (bmiValue >= 18.5 && bmiValue < 25) setStatus("Normal");
+    else if (bmiValue >= 25 && bmiValue < 30) setStatus("OverWeight");
+    else setStatus("Obese");
+  }
+
     const imageUrl = 'https://htmldemo.net/zymzoo/zymzoo/assets/img/testimonial/1.jpg';
   return (
     <>
@@ -28,14 +62,18 @@ const BmiCal = () => {
 <section className="input px-4 mt-8">
 <input
         className="border-b border-white w-full text-white p-2 my-4   bg-transparent focus:border-yellow-500 outline-none"
-        type="text"
+        type="number"
+        value={Height}
+        onChange={(e) => setHeight(e.target.value)}
         placeholder="Height/Cm"
       />
 
 <input
         className="border-b border-white w-full text-white p-2 my-4   bg-transparent focus:border-yellow-500 outline-none"
-        type="text"
+        type="number"
         placeholder="Weight/kg"
+        value={Weight}
+        onChange={(e) => setWeight(e.target.value)}
       />
 <input
         className="border-b border-white w-full text-white p-2 my-4   bg-transparent focus:border-yellow-500 outline-none"
@@ -50,13 +88,23 @@ const BmiCal = () => {
 </section>
 
 <section className="cal flex px-4 text-white justify-between mt-3rem]">
-    <div className="btnCalc w-full mt-6">
+    <div onClick={calculateBMi} className="btnCalc w-full mt-6">
         <button className='bg-yellow-500 rounded-full w-[70%] h-[3rem]'>Calculate</button>
     </div>
     <div className="score">
-        <h1 className='text-[4rem]'>0.0</h1>
+        <h1 className='text-[3rem]'>{Bmi}</h1>
     </div>
 </section>
+
+{
+
+  Bmi && (
+    <div className='bg-yellow-500 p-2 mt-4 flex justify-center font-semibold text-white'>
+   
+    <p>Status: {Status}</p>
+  </div>
+  )
+}
             </div>
         </figure>
         </section>
