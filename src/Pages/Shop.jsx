@@ -1,11 +1,18 @@
 
-import React from 'react'
-import Header from '../Component/Header'
-import Footer from '../Component/Footer'
+
+
+
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Header from '../Component/Header';
+import Footer from '../Component/Footer';
 import { FaShoppingCart } from 'react-icons/fa';
 import Loader from '../Component/Loader';
+import { addToCart } from '../Redux/cartSlice';
 
 const Shop = () => {
+  const dispatch = useDispatch();
+  const cart = useSelector(state => state.cart);
 
   const imageUrl = 'https://htmldemo.net/zymzoo/zymzoo/assets/img/photos/bg-page2.jpg';
 
@@ -96,69 +103,52 @@ const Shop = () => {
 
 
 ]
+
+  const handleAddToCart = (item) => {
+    dispatch(addToCart(item));
+  };
+
   return (
     <>
-    <Loader />
-    <Header />
-
-<section className="shopCon pt-[4rem]">
-
-
-
-<figure className="img relative">
-            <div className="bg-black  z-20 w-full inset-0  absolute opacity-80"></div>
-            <img src={imageUrl} className='w-full h-[270px] object-cover' alt="" />
-            <div className="  z-30 w-full inset-0  absolute ">
-
-<section className="desc text-cener pt-[4rem] px-5">
-
-            <h1 className='text-[2rem]    text-yellow-500 textcenter  font-bold uppercase s'>
-          <span className='mx-1 text-slate-100'> OUR   </span>PODUCTS <br /> 
-            </h1>
-          <p className='text-white'>We have very professional and exprt Instructor and they can very important to maintain
-our health luptas sit fugit, sed quia cuuntur magni dolores some products
-
-</p>
-         
-</section>
-
-
-            </div>
+      <Loader />
+      <Header />
+      
+      <section className="shopCon pt-[4rem]">
+        <figure className="img relative">
+          <div className="bg-black z-20 w-full inset-0 absolute opacity-80"></div>
+          <img src={imageUrl} className='w-full h-[270px] object-cover' alt="" />
+          <div className="z-30 w-full inset-0 absolute">
+            <section className="desc text-center pt-[4rem] px-5">
+              <h1 className='text-[2rem] text-yellow-500 text-center font-bold uppercase'>
+                <span className='mx-1 text-slate-100'>OUR</span>PRODUCTS
+              </h1>
+              <p className='text-white'>We have very professional and expert Instructor and they can very important to maintain our health luptas sit fugit, sed quia cuuntur magni dolores some products</p>
+            </section>
+          </div>
         </figure>
 
-
-
-
-
         <section className="shop grid grid-cols-2">
-        {ExercItems.map((shop,idx)=> (
-<section className="shopCon border p-2 shaow rounded-md ">
-    <img src={shop.img} alt="" />
-    {/* <StarRating rating={shop.rating}  /> */}
-    <p className='my-1'> {shop.name.substring(0,15)}...</p>
+          {ExercItems.map((shop, idx) => (
+            <section key={idx} className="shopCon border p-2 shadow rounded-md">
+              <img src={shop.img} alt="" />
+              <p className='my-1'>{shop.name.substring(0, 15)}...</p>
+              <span className='flex justify-between w-full py-2'>
+                <p className='font-bold'>${shop.price}</p>
+                <button
+                  onClick={() => handleAddToCart(shop)}
+                  className="bg-yellow-500 w-[30%] flex justify-center items-center text-white rounded-[4px] h-[1.5rem]"
+                >
+                  <FaShoppingCart className="ml-2" />
+                </button>
+              </span>
+            </section>
+          ))}
+        </section>
+      </section>
 
-    <span className='flex justify-between w-full py-2'>
-
-    <p className='font-bold'>${shop.price}</p>
-
-  
-
-    <button  className=" bg-yellow-500  w-[30%] flex justify-center items-center text-white rounded-[4px] h-[1.5rem]">
-                 <FaShoppingCart className="ml-2 " />
-              </button>
-    
-    </span>
-</section>
-
-        ))}
-    </section>
-
-</section>
-
-    <Footer/> 
-    
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Shop
+export default Shop;

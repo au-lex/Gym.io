@@ -1,7 +1,13 @@
 import React,{useState} from 'react'
 import { CgMenuRight } from "react-icons/cg";
 import { FaHome, FaShoppingCart, FaDumbbell, FaEnvelope, FaInfoCircle } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 const Header = () => {
+
+  const cart = useSelector(state => state.cart);
+  const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   const [openNav, SetopenNav] = useState(false)
 
@@ -24,7 +30,10 @@ alt="" />
 
 </div>
  
-
+<Link to ="/cart" className="cart-icon block bg-white">
+        <FaShoppingCart />
+        <span>{cartItemCount}</span>
+      </Link>
 
 <div className="meuebar">
 <CgMenuRight onClick={handleOpen} className ="text-[2.5rem] text-white" />
