@@ -1,7 +1,20 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
+import Loader from '../../Component/Loader';
+import Header from '../../Component/Header';
+import Footer from '../../Component/Footer';
+import { IoReturnUpBack } from "react-icons/io5";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../Redux/cartSlice';
 
 const ShopDetails = () => {
+
+    const dispatch = useDispatch();
+
+    const handletoCart = (items) => {
+        dispatch(addToCart(items))
+    }
+
     const [ShopDetails, SetShopDetails] = useState([]);
 
 
@@ -93,7 +106,6 @@ const ShopDetails = () => {
     
     ]
 
-    // const shop = ExercItems.find(item => item.name === id);
 
     const {id} = useParams();
 
@@ -102,16 +114,40 @@ const ShopDetails = () => {
 
 
   return (
-    <div>
+    <>
+
+    <Loader />
+
+    <Header />
 
 
-<div>
-      <h1>{shop.name}</h1>
-      <img src={shop.img} alt={shop.name} />
-      <p>Price: ${shop.price}</p>
+<main className='pt-[5rem] px-4 pb-[2rem]'>
+<Link to="/shop" className=' bg-yellow-5 my-3 shadow border border-yellow-500 w-[2rem] h-[2rem] 
+        rounded-full flex justify-center items-center'>  <IoReturnUpBack /></Link>
+        
+        <figure className="imgCont  w-full ">
+
+      <img src={shop.img} alt={shop.name} 
+      className=' w-full h-[300px] object-cover' />
+        </figure>
+
+        <figcaption className="imgDesc">
+
+      <h1 className='text-[25px] font-semibold'>{shop.name}</h1>
+      <p className='font-bold text-yellow-500 text-[18px]'>Price: ${shop.price}</p>
       <p>Rating: {shop.rating}</p>
-    </div>
-    </div>
+      <p className='mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe maiores explicabo 
+        beatae. Quo enim voluptatibus alias cum eum aut.
+         Eligendi sit ipsam reprehenderit, autem esse officia tempora quisquam eius minima?</p>
+
+      <div onClick={()=> handletoCart(shop) } className="btn mt-4">
+        <button className="add bg-yellow-500 w-full p-2 text-slate-100 rounded-[5px] cursor-pointer">Add to Cart</button>
+      </div>
+        </figcaption>
+    </main>
+
+    <Footer />
+    </>
   )
 }
 

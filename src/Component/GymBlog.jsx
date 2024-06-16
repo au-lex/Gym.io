@@ -46,7 +46,7 @@ const GymBlog = () => {
   return (
     <>
 
-    <section className="gymblo mt-[5rem]  px-4">
+    <section className="gymblo mt-[5rem] pb-[2rem]  px-4">
 
 <section className="title text-center">
            
@@ -67,7 +67,7 @@ didunt ut labore et dolore m et dolore magna aliqua minim niam</p>
     <img src={blog.image} className='rounded-[10px]' alt="" />
     <p className='flex text-[20px]  mt-3  '><FaRegCalendarAlt
       className='text-[1.5rem] text-yellow-500 mr-2' />{blog.date} </p>
-    <h1 className='text-[2rem] font-semibold leading-[45px] mb-2'>{blog.title}</h1>
+    <h1 className='text-[1.4em] font-semibold leading-[30px] mb-2'>{blog.title}</h1>
     <p>{blog.venue}</p>
     <p>{blog.description.substring(0,75)}.... 
     <span className='text-yellow-500 font-semibold'>Read More</span></p>

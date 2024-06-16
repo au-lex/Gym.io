@@ -9,15 +9,7 @@ const BmiCal = () => {
 
 
 
-  // const calculateBMi = () => {
-  //   const height_in_Meters = Height/100;
-  //   const bmiValue = (Weight/(height_in_Meters * height_in_Meters)).toFixed(2);
-  //   setBmi(bmiValue);
-  //   if (bmiValue < 18.5) setStatus("UnderWeight");
-  //   else if (bmiValue >= 18.5 && bmiValue < 25); setStatus("Normal");
-  //   else if (bmiValue >= 25 && bmiValue < 30); setStatus("OverWeight");
-  //   else setStatus("OverWeight")
-  // }
+
 
   const calculateBMi = () => {
 

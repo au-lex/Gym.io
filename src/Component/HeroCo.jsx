@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HeroCo = () => {
   return (
@@ -28,10 +29,10 @@ const HeroCo = () => {
            Similique, aliquam quaerat rem voluptatem officiis a at officia odit sapiente minima?</p>
     </section>
     
-<div className="btn flex justify-center my-[2rem]">
+<Link to ="/exercise" className="btn flex justify-center my-[2rem]">
 
     <button className='border-2 border-yellow-500 text-slate-200 rounded-[50px] text-[1.5rem] w-[60%] p-3 '>Gym Now</button>
-</div>
+</Link>
 
     <div>
 

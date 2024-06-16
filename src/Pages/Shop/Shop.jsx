@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 
 const Shop = () => {
   const dispatch = useDispatch();
-  const cart = useSelector(state => state.cart);
+  // const cart = useSelector(state => state.cart);
 
   const imageUrl = 'https://htmldemo.net/zymzoo/zymzoo/assets/img/photos/bg-page2.jpg';
 
