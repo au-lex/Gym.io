@@ -47,18 +47,26 @@ const Exercise = () => {
      routePath: "/waist-exercises",
    },
  ];
-
+ const imageUrl = 'https://htmldemo.net/zymzoo/zymzoo/assets/img/testimonial/1.jpg';
  return (
    <>
      <Loader />
      <Header />
-     <main className="generalConatiner w-full exerciseDb flex items-center  bg-black   pt-[6rem]">
+     {/* <main className="generalConatiner w-full exerciseDb flex items-center  bg-black   pt-[6rem]">
        <section className=" w-full pb-[2rem] ">
-         <h1 className="text-[1.2rem]  pl-4   mb-4 text-yellow-500 textcenter  font-bold uppercase s">
-           choose<span className="mx-1 text-slate-100"> Exercises.... </span>{" "}
+        <div className="inp px-3 mb-2" >
+
+        <input type="text" 
+        placeholder="Search Exercises..."
+        className="search w-full  rounded-[5px] p-2 placeholder:text-yellow-500 bg-transparent border text-yellow-500 border-yellow-500" />
+         <h1 className="text-[1.2rem]    mt-4 text-yellow-500 textcenter  font-bold uppercase s">
+           Filter<span className="mx-1 text-slate-100"> Exercises </span>
            <br />
          </h1>
-         <section className="container grid grid-cols-2 md:grid-cols-4 px-[.5rem]">
+         <p className="text-white text-[12px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur cum quos pariatur,
+           similique iusto blanditiis sequi debitis mollitia accusamus architecto.</p>
+        </div>
+         <section className="container grid grid-cols-2 md:grid-cols-4 ">
            {ExerciseList.map((exer) => (
              <Link
                to={exer.routePath}
@@ -81,7 +89,59 @@ const Exercise = () => {
            ))}
          </section>
        </section>
-     </main>
+     </main> */}
+
+
+
+<section className="">
+
+
+<figure className="img relative">
+    <div className="bg-black  z-20 w-full inset-0  absolute opacity-80"></div>
+    <img src={imageUrl} className='w-full h-[980px] object-cover' alt="" />
+    <div className="  z-30 w-full inset-0  absolute mt-[6rem] ">
+
+    <section className=" w-full pb-[2rem] ">
+        <div className="inp px-3 mb-2" >
+
+        <input type="text" 
+        placeholder="Search Exercises..."
+        className="search w-full  rounded-[5px] p-2 placeholder:text-yellow-500 bg-transparent border text-yellow-500 border-yellow-500" />
+         <h1 className="text-[1.2rem]    mt-4 text-yellow-500 textcenter  font-bold uppercase s">
+           Filter<span className="mx-1 text-slate-100"> Exercises </span>
+           <br />
+         </h1>
+         <p className="text-white text-[12px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur cum quos pariatur,
+           similique iusto blanditiis sequi debitis mollitia accusamus architecto.</p>
+        </div>
+         <section className="container grid grid-cols-2 md:grid-cols-4 ">
+           {ExerciseList.map((exer) => (
+             <Link
+               to={exer.routePath} 
+               key={exer.name}
+               className="border-2 border-yellow-500 rounded-[10px] bg-white h-[10rem] overflow-hidden m-2"
+             >
+               <figure className="imgCon relative ">
+                 <img
+                   src={exer.gifUrl}
+                   alt="img-exer"
+                   className="w-full h-[156px] rounded-[10px] object-cover"
+                 />
+                 <figcaption className=" absolute  bottom-0">
+                   <h1 className="text-white bg-yellow-500 text-[12px] capitalize p-1">
+                     {exer.name}
+                   </h1>
+                 </figcaption>
+               </figure>
+             </Link>
+           ))}
+         </section>
+       </section>
+
+
+    </div>
+</figure>
+</section>
      <Footer />
    </>
  );

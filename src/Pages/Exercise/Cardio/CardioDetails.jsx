@@ -40,7 +40,8 @@ const CardioDetails = () => {
       
       <div className="max-w-xl mx-auto bg-white pt-[6rem] p-4 rounded-lg shadow-lg">
 
-        <Link to="/cardio-exercises" className=' bg-yellow-5 shadow border border-yellow-500 w-[2rem] h-[2rem] rounded-full flex justify-center items-center'>  <IoReturnUpBack /></Link>
+        <Link to="/cardio-exercises" className=' bg-yellow-5 shadow border border-yellow-500 w-[2rem] h-[2rem] 
+        rounded-full flex justify-center items-center'>  <IoReturnUpBack /></Link>
         <img
           src={exerciseDetails.gifUrl}
           alt={exerciseDetails.name}
