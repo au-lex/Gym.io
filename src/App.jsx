@@ -5,18 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import About from "./Pages/About.jsx";
-import Shop from "./Pages/Shop.jsx";
-// import Contact from "./Pages/Contact.jsx";
-// import Exercise from "./Pages/Exercise/Exercise.jsx";
-// import Cardio from "./Pages/Exercise/Cardio/Cardio.jsx";
-// import Chest from "./Pages/Exercise/Chest/Chest.jsx";
-// import LowerArms from "./Pages/Exercise/LowerArms/LowerArms.jsx";
-// import LowerLegs from "./Pages/Exercise/LowerLegs/LowerLegs.jsx";
-// import Shoulder from "./Pages/Exercise/Shoulders/Shoulder.jsx";
-// import UpperArms from "./Pages/Exercise/UpperArms/UpperArms.jsx";
-// import UpperLegs from "./Pages/UpperLegs/UpperLegs.jsx";
-// import Waist from "./Pages/Exercise/Waist/Waist.jsx";
-// import CardioDetails from "./Pages/Exercise/Cardio/CardioDetails.jsx";
+
 import LandingPage from "./Pages/LandingPage.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Exercise from "./Pages/Exercise/Exercise.jsx";
@@ -30,6 +19,9 @@ import UpperArms from "./Pages/Exercise/UpperArms/UpperArms.jsx";
 import UpperLegs from "./Pages/Exercise/UpperLegs/UpperLegs.jsx";
 import Waist from "./Pages/Exercise/Waist/Waist.jsx";
 import Cart from "./Pages/Cart.jsx";
+import ShopDetails from "./Pages/Shop/ShopDetails.jsx";
+import Shop from "./Pages/Shop/Shop.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -43,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/shop",
     element: <Shop />,
+  },
+  {
+    path: "/shop/:id",
+    element: <ShopDetails />,
   },
   {
     path: "/cart",

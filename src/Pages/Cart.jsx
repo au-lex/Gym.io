@@ -30,11 +30,12 @@ const Cart = () => {
     <Loader />
 
     <Header />
-    <div className='pt-[6rem] px-4 '>
+    <div className='pt-[5rem] px-4 '>
         
+
       
       {cart.length === 0 ? (
-
+        
         <section className="flex items-center justify-center flex-col h-[50vh]">
 
           <p className='mb-2 '>Your cart is empty</p>
@@ -46,6 +47,7 @@ const Cart = () => {
             <>
 
 <Link to="/shop" className=' bg-yellow-5 shadow border mb-4 border-yellow-500 w-[2rem] h-[2rem] rounded-full flex justify-center items-center'>  <IoReturnUpBack /></Link>
+<h1 className=' font-semibold capitalize mb-4'>my cart</h1>
           {cart.map((item, index) => (
               <div key={index} className='flex border  shadow-sm rounded-[10px] mb-3 border-yellow-500'>
 
