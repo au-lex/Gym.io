@@ -4,11 +4,12 @@
 
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Header from '../Component/Header';
-import Footer from '../Component/Footer';
+import Header from '../../Component/Header';
+import Footer from '../../Component/Footer';
 import { FaShoppingCart } from 'react-icons/fa';
-import Loader from '../Component/Loader';
-import { addToCart } from '../Redux/cartSlice';
+import Loader from '../../Component/Loader';
+import { addToCart } from '../../Redux/cartSlice';
+import { Link } from 'react-router-dom';
 
 const Shop = () => {
   const dispatch = useDispatch();
@@ -130,7 +131,9 @@ const Shop = () => {
         <section className="shop grid grid-cols-2">
           {ExercItems.map((shop, idx) => (
             <section key={idx} className="shopCon border p-2 shadow rounded-md">
+              <Link to ={`/shop/${shop.name}`} className='block border rounded-[10px]'>
               <img src={shop.img} alt="" />
+              </Link>
               <p className='my-1'>{shop.name.substring(0, 15)}...</p>
               <span className='flex justify-between w-full py-2'>
                 <p className='font-bold'>${shop.price}</p>
