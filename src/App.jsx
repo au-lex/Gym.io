@@ -24,6 +24,10 @@ import Shop from "./Pages/Shop/Shop.jsx";
 import ChestDetails from "./Pages/Exercise/Chest/ChestDetails.jsx";
 import LowerDetails from "./Pages/Exercise/LowerArms/LowerDetails.jsx";
 import LowerLegDetails from "./Pages/Exercise/LowerLegs/LowerLegDetails.jsx";
+import ShoulderDetails from "./Pages/Exercise/Shoulders/ShoulderDetails.jsx";
+import WaistDetails from "./Pages/Exercise/Waist/WaistDetails.jsx";
+import UpperArmsDetails from "./Pages/Exercise/UpperArms/UpperArmsDetails.jsx";
+import UpperLegsDetails from "./Pages/Exercise/UpperLegs/UpperLegsDetails.jsx";
 
 
 const router = createBrowserRouter([
@@ -93,16 +97,32 @@ const router = createBrowserRouter([
     element: <Shoulder />,
   },
   {
+    path: "/shoulderDetails/:id",
+    element: <ShoulderDetails />,
+  },
+  {
     path: "/upper-arms-exercises",
     element: <UpperArms />,
+  },
+  {
+    path: "/upperArmsDetails/:id",
+    element: <UpperArmsDetails />,
   },
   {
     path: "/upper-legs-exercises",
     element: <UpperLegs />,
   },
   {
+    path: "/upperLegsDetails/:id",
+    element: <UpperLegsDetails />,
+  },
+  {
     path: "/waist-exercises",
     element: <Waist />,
+  },
+  {
+    path: "/waistDetails/:id",
+    element: <WaistDetails />,
   },
 ]);
 

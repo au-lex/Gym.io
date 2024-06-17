@@ -28,7 +28,7 @@ const ExerciseCard = ({ exercise }) => {
         </p>
         <div className="btn">
         <Link
-  to={`/shoulderDetails/${exercise.id}`}
+  to={`/upperLegsDetails/${exercise.id}`}
   className="bg-yellow-500 block text-center text-white w-full p-2 rounded-[5px]"
 >
   More info..
