@@ -1,58 +1,57 @@
-import React from 'react';
-
-const dummyPosts = [
-  {
-    id: 1,
-    slug: 'first-post',
-    title: 'First Post',
-    content: 'This is the content of the first post.',
-    status: 'Published',
-    publishedAt: '2023-06-01',
-  },
-  {
-    id: 2,
-    slug: 'second-post',
-    title: 'Second Post',
-    content: 'This is the content of the second post.',
-    status: 'Draft',
-    publishedAt: '2023-06-02',
-  },
-  {
-    id: 3,
-    slug: 'third-post',
-    title: 'Third Post',
-    content: 'This is the content of the third post.',
-    status: 'Published',
-    publishedAt: '2023-06-03',
-  },
-];
+import React, { useState, useEffect } from 'react';
+import { Pagination } from 'antd';
+import ExerciseData from "../../../Hooks/ApiData";
+import Header from "../../../Component/Header";
+import Footer from "../../../Component/Footer";
+import Loader from "../../../Component/Loader";
+import ExerciseCard from '../ExerciseCards/ExerCard2';
 
 const Chest = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 6;
+
+  const { data, isLoading, error } = ExerciseData(`/bodyPart/chest?limit=${pageSize}&offset=${(currentPage - 1) * pageSize}`);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
+  if (isLoading) {
+    return (
+      <>
+        <Loader />
+      </>
+    );
+  }
+
+  if (error) {
+    return <div className="text-red-500 text-center py-8">Error: {error.message}</div>;
+  }
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
-    <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200 bg-white border border-gray-300">
-        <thead className="bg-gray-50">
-          <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Heading</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Content</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pub. At</th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-gray-200">
-          {dummyPosts.map((post) => (
-            <tr key={post.id} className="hover:bg-gray-100">
-              <td className="px-6 py-4 whitespace-nowrap">{post.slug}</td>
-              <td className="px-6 py-4 whitespace-nowrap">{post.title.substring(0, 20)}...</td>
-              <td className="px-6 py-4 whitespace-nowrap">{post.content.substring(0, 20)}...</td>
-              <td className="px-6 py-4 whitespace-nowrap">{post.status}</td>
-              <td className="px-6 py-4 whitespace-nowrap">{post.publishedAt}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <>
+      <Header />
+      <div className="bg-black pb-[2rem] pt-[6rem]">
+        {data.map((exercise, index) => (
+          <ExerciseCard key={index} exercise={exercise} />
+        ))}
+        <div className="flex justify-center px-[.8rem] mt-8">
+          <Pagination
+            current={currentPage}
+            total={29}
+            pageSize={pageSize}
+            onChange={handlePageChange}
+            showSizeChanger={false}
+            className="text-white bg-yellow-500 rounded-[10px] p-2 w-full flex justify-center"
+          />
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 

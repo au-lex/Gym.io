@@ -21,6 +21,7 @@ import Waist from "./Pages/Exercise/Waist/Waist.jsx";
 import Cart from "./Pages/Cart.jsx";
 import ShopDetails from "./Pages/Shop/ShopDetails.jsx";
 import Shop from "./Pages/Shop/Shop.jsx";
+import ChestDetails from "./Pages/Exercise/Chest/ChestDetails.jsx";
 
 
 const router = createBrowserRouter([
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
   {
     path: "/chest-exercises",
     element: <Chest />,
+  },
+  {
+    path: "/chestDetails/:id",
+    element: <ChestDetails />,
   },
   {
     path: "/lower-arms-exercises",
