@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { IoReturnUpBack } from "react-icons/io5";
+
 
 const ExerciseCard = ({ exercise }) => {
 
@@ -28,7 +28,7 @@ const ExerciseCard = ({ exercise }) => {
         </p>
         <div className="btn">
         <Link
-  to={`/chestDetails/${exercise.id}`}
+  to={`/lowerDetails/${exercise.id}`}
   className="bg-yellow-500 block text-center text-white w-full p-2 rounded-[5px]"
 >
   More info..

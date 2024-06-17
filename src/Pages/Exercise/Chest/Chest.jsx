@@ -5,6 +5,8 @@ import Header from "../../../Component/Header";
 import Footer from "../../../Component/Footer";
 import Loader from "../../../Component/Loader";
 import ExerciseCard from '../ExerciseCards/ExerCard2';
+import { Link } from 'react-router-dom';
+import { IoReturnUpBack } from "react-icons/io5";
 
 const Chest = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -35,7 +37,12 @@ const Chest = () => {
   return (
     <>
       <Header />
-      <div className="bg-black pb-[2rem] pt-[6rem]">
+      <div className="bg-black pb-[2rem] pt-[5.5rem]">
+        <div className="back px-2 pb-4">
+
+      <Link to="/exercise" className=' bg-yellow-5 text-white  shadow text-[1.3rem] borderyellow-100 w-[2rem] border-2 h-[2rem] 
+        rounded-full flex justify-center items-center'>  <IoReturnUpBack /></Link>
+        </div>
         {data.map((exercise, index) => (
           <ExerciseCard key={index} exercise={exercise} />
         ))}
