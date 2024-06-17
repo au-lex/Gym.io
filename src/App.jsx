@@ -22,6 +22,8 @@ import Cart from "./Pages/Cart.jsx";
 import ShopDetails from "./Pages/Shop/ShopDetails.jsx";
 import Shop from "./Pages/Shop/Shop.jsx";
 import ChestDetails from "./Pages/Exercise/Chest/ChestDetails.jsx";
+import LowerDetails from "./Pages/Exercise/LowerArms/LowerDetails.jsx";
+import LowerLegDetails from "./Pages/Exercise/LowerLegs/LowerLegDetails.jsx";
 
 
 const router = createBrowserRouter([
@@ -74,8 +76,17 @@ const router = createBrowserRouter([
     element: <LowerArms />,
   },
   {
+    path: "/lowerDetails/:id",
+    element: <LowerDetails />,
+  },
+  {
     path: "/lower-legs-exercises",
     element: <LowerLegs />,
+  },
+
+  {
+    path: "/lowerlegDetails/:id",
+    element: <LowerLegDetails />,
   },
   {
     path: "/shoulders-exercises",
