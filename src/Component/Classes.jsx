@@ -6,7 +6,7 @@ const Classes = () => {
   return (
     <>
     {/* desktop */}
-    <section className="classess hidden mt-[3rem] px-3 md:flex justify-center md:px-[3rem]  md:mt-[5rem]  ">
+    <section className="classess hidden mt-[3rem] px-3 md:flex justify-center md:px-[3rem]  md:my-[8rem]  ">
 
         <figcaption className='b500 border shadow p-5'>
 
@@ -36,7 +36,7 @@ const Classes = () => {
                  </figcaption>
 
 <figure className="classimg md:mt-0 md:order-[-1] p-2 mt-5 bg-yellow-500">
-    <div className="imgContainer md:w-[400px]   border-2  border-slate-3-00 shadow rounded-full p-4">
+    <div className="imgContainer md:w-[400px]   border-2   border-slate-3-00 shadow rounded-full p-4">
 
     <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/photos/d1.jpg"
     className=']'

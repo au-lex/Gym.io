@@ -9,7 +9,7 @@ const HeroCo = () => {
     
     
      <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/slider/1.jpg" 
-     className = "w-full h-[45rem] object-cover"
+     className = "w-full md:h-[45rem] h-[49rem] object-cover"
      alt="" />
     
      
@@ -18,27 +18,30 @@ const HeroCo = () => {
     
     
     
-    <section className="heroContent  absolute inset-0 top-[5rem]">
+    <section className="heroContent md:grid md:grid-cols-2  md:pt-[3.5rem] overflow-hidden absolute inset-0 top-[5rem]">
 
 
-    <section className="herotext text-center pt-[2rem] px-3">
-        <h1 className='text-[4rem] leading-[4.5rem] text-white font-bold uppercase s'>
+    <section className="herotext text-center md:text-left w pt-[2rem] md:px-[2rem]  px-3">
+        <h1 className='text-[4rem] md:text-[8rem] md:leading-[7.5rem] leading-[4.5rem] text-white font-bold uppercase s'>
           <span className='text-yellow-500'>time </span> to <br /> get <span className='text-yellow-500'>fit</span> </h1>
         
-        <p className='text-slate-200'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <p className='text-slate-200 md:text-[18px] md:my-[2rem]'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
            Similique, aliquam quaerat rem voluptatem officiis a at officia odit sapiente minima?</p>
+
+
+           <Link to ="/exercise" className="btn flex justify-center md:justify-start my-[2rem]">
+
+    <button className='border-2 border-yellow-500 hover:bg-yellow-500 hover:text-white duration-200 text-slate-200 rounded-[50px] text-[1.5rem] w-[60%] p-3 '>Gym Now</button>
+</Link>
     </section>
     
-<Link to ="/exercise" className="btn flex justify-center my-[2rem]">
 
-    <button className='border-2 border-yellow-500 text-slate-200 rounded-[50px] text-[1.5rem] w-[60%] p-3 '>Gym Now</button>
-</Link>
 
     <div>
 
             <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/slider/h-1.png" 
             
-            className='w-full h-[320px] object-cover'
+            className='w-full h-[400px] md:h-[650px] object-cover'
             alt="" />
     </div>
 

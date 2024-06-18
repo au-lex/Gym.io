@@ -115,9 +115,9 @@ const ExercItems = [
 our health luptas sit fugit, sed quia cuuntur magni dolores some products</p>
       </section>
     
-    <section className="shop grid grid-cols-2 md:grid-cols-4  md:px-[2rem] md:space-x-4 md:space-y-4">
+    <section className="shop grid grid-cols-2 md:grid-cols-4  md:px-[2rem] md:space-x4  md:spac-y-4">
         {ExercItems.map((shop,idx)=> (
-<section className="shopCon border p-2 shaow rounded-md ">
+<section className="shopCon border p-2 md:m-4 shaow rounded-md ">
     <img src={shop.img} alt="" />
     <StarRating rating={shop.rating}  />
     <p className='my-1'> {shop.name.substring(0,15)}...</p>

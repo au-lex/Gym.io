@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <>
     
-    <section className="header bg-[#1F1F1F] z-40 shadow-md fixed w-full h-[4.5rem] p-3  " >
+    <section className="header bg-[#1F1F1F] z-40 shadow-md fixed w-full h-[4.5rem] p-3  md:px-[2rem] " >
 
         <section className="headerControll flex  justify-between items-center">
 
@@ -35,9 +35,45 @@ alt="" />
         <span className=' text-white bg-red-500 p-3 ml-[-.2rem] rounded-full h-[1rem] w-[1rem] flex justify-center items-center'>{cartItemCount}</span>
       </Link>
 
-<div className="meuebar">
+<div className="meuebar md:hidden block">
 <CgMenuRight onClick={handleOpen} className ="text-[2.5rem] text-white" />
 </div>
+
+
+{/* =======desktop nav===== */}
+
+
+<section className={`md:flex hidden `} >
+
+  <a href="/" className='blck flex items-center py-3 px-4 mb-3 text-white hover:text-yellow-500 duration-200 transition-colors'>
+    <FaHome className="mr-2" size={20} />
+    <span className="fontbold text-[20px]">Home</span>
+  </a>
+
+  <a href="/shop" className='blok flex items-center  mb-3 py-3 px-4 text-white hover:text-yellow-500 duration-200 transition-colors'>
+    <FaShoppingCart className="mr-2" size={20} />
+    <span className="fontbold text-[20px]">Shop</span>
+  </a>
+
+  <a href="/exercise" className='blok flex items-center  mb-3 py-3 px-4 text-white hover:text-yellow-500 duration-200 transition-colors'>
+    <FaDumbbell className="mr-2" size={20} />
+    <span className="fontbold text-[20px]">Exercise</span>
+  </a>
+
+  <a href="/contact" className='blo
+  ck flex items-center py-3 px-4 text-white  mb-3 hover:text-yellow-500 duration-200 transition-colors'>
+    <FaEnvelope className="mr-2" size={20} />
+    <span className="fontbold text-[20px]">Contact</span>
+  </a>
+
+  <a href="/about" className='blo
+  ck flex items-center py-3 px-4 text-white   mb-3 hover:text-yellow-500 duration-200 transition-colors'>
+    <FaInfoCircle className="mr-2" size={20} />
+    <span className="fontbold  text-[20px]">About</span>
+  </a>
+
+</section>
+
 
 {/* mobilenavbar======== */}
 
