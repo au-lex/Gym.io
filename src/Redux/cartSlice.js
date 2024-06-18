@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { ToastContainer, toast } from 'react-toastify';
 
-// Load cart from local storage
 const loadCartFromLocalStorage = () => {
   try {
     const serializedCart = localStorage.getItem('cart');
@@ -34,12 +34,15 @@ const cartSlice = createSlice({
         itemExists.quantity++;
       } else {
         state.push({ ...action.payload, quantity: 1 });
-        alert("New item added to cart");
+        // alert("New item added to cart");
+         toast.success('New item added to cart')
       }
       saveCartToLocalStorage(state);
     },
     removeFromCart: (state, action) => {
       const newState = state.filter(item => item.name !== action.payload.name);
+      
+    toast.error('Item removed from cart');
       saveCartToLocalStorage(newState);
       return newState;
     },
@@ -47,6 +50,7 @@ const cartSlice = createSlice({
       const item = state.find(item => item.name === action.payload.name);
       if (item) {
         item.quantity++;
+        toast.info('Quantity increased');
         saveCartToLocalStorage(state);
       }
     },
@@ -54,6 +58,7 @@ const cartSlice = createSlice({
       const item = state.find(item => item.name === action.payload.name);
       if (item) {
         item.quantity = item.quantity > 1 ? item.quantity - 1 : 1;
+        toast.info('Quantity decreased');
         saveCartToLocalStorage(state);
       }
     },

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 
 const BmiCal = () => {
 
@@ -14,7 +15,8 @@ const BmiCal = () => {
   const calculateBMi = () => {
 
     if (Weight <= 0 || Height <= 0) {
-      alert("Please enter valid weight and height");
+      toast.error('Please enter valid weight and height');
+      // alert("");
       return;
     }
 
