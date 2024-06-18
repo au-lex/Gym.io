@@ -13,17 +13,17 @@ const Footer = () => {
     <>
     
     
-    <section className="footer mt4rem] relative">
+    <section className="footer mt4rem] relative   ">
         <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/photos/bg-f1.png"
         
         
-        className='w-full h-[50rem] object-cover '
+        className='w-full h-[50rem] md:h-[25rem] object-cover '
         alt="" />
 
-    <section className="navlinksContainer px-4 top-[1rem] absolute inset-0 text-gray-300">
+    <section className="navlinksContainer md:px-8 md:flex md:justify-between px-4 md:pt-[2.5rem] top-[1rem] absolute inset-0 text-gray-300">
 
         {/*=========== first row ========*/}
-        <section className="firstrow">
+        <section className="firstrow md:w-[30%] ">
 
     <div className="log flex space-x-3">
 <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/icons/g1.png"
@@ -49,7 +49,7 @@ alt="" />
 {/*=========== second row ========  */}
 
 
-<section className="secRow my-8">
+<section className="secRow my-8 md:my-0 md:w-[30%]">
 <p className=' uppercase text-[1.3rem] mt-4 font-bold text-yellow-500'>contact info</p>
 
 <section className="flex space-x-4 mt-4">
@@ -109,7 +109,7 @@ www.example.com
 
 {/* ======= third row ===== */}
 
-<section className="thirdrow">
+<section className="thirdrow md:w-[30%]">
     <p className=' uppercase text-[1.3rem] mt-4 font-bold text-yellow-500'>Newsletter</p>
     <p className='mt-2'>Subscribe our Newsletter and gates latest updates of offers, 
         productsa and promotions from every week we provide</p>

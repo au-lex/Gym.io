@@ -42,7 +42,7 @@ const BmiCal = () => {
             <img src={imageUrl} className='w-full h-[600px] object-cover' alt="" />
             <div className="  z-30 w-full inset-0  absolute ">
 
-<section className="desc text-center pt-12">
+<section className="desc text-center pt-12 ">
 
             <h1 className='text-[2rem]    text-yellow-500 text-center  font-bold uppercase s'>
           <span className='mx-1 text-slate-100'> BMI  </span>CALCULATOR <br /> 
@@ -53,7 +53,7 @@ const BmiCal = () => {
          
 </section>
 
-<section className="input px-4 mt-8">
+<section className="input px-4 mt-8 md:px-[10rem]">
 <input
         className="border-b border-white w-full text-white p-2 my-4   bg-transparent focus:border-yellow-500 outline-none"
         type="number"
@@ -81,11 +81,11 @@ const BmiCal = () => {
       />
 </section>
 
-<section className="cal flex px-4 text-white justify-between mt-3rem]">
+<section className="cal flex px-4 md:px-[10rem] text-white justify-between mt-3rem]">
     <div onClick={calculateBMi} className="btnCalc w-full mt-6">
         <button className='bg-yellow-500 rounded-full w-[70%] h-[3rem]'>Calculate</button>
     </div>
-    <div className="score">
+    <div className="score ">
         <h1 className='text-[3rem]'>{Bmi}</h1>
     </div>
 </section>
@@ -93,10 +93,13 @@ const BmiCal = () => {
 {
 
   Bmi && (
-    <div className='bg-yellow-500 p-2 mt-4 flex justify-center font-semibold text-white'>
+    <div className=' md:px-[10rem]'>
+
+    <div className='bg-yellow-500 p-2  mt-4 flex justify-center font-semibold text-white'>
    
     <p>Status: {Status}</p>
   </div>
+    </div>
   )
 }
             </div>

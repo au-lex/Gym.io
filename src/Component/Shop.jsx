@@ -103,6 +103,8 @@ const ExercItems = [
     <>
     
     <section className="shopCont px-4 mt-[4rem]">
+      <section className="text-center mb-4 ">
+
 
 <h1 className='text-[2rem]    text-yellow-500 font-bold uppercase s'>
           <span className='mx-1 text-slate-900'>GYM  </span> products <br /> 
@@ -111,8 +113,9 @@ const ExercItems = [
 
 <p className='mb-4'>We have very professional and exprt Instructor and they can very important to maintain
 our health luptas sit fugit, sed quia cuuntur magni dolores some products</p>
+      </section>
     
-    <section className="shop grid grid-cols-2">
+    <section className="shop grid grid-cols-2 md:grid-cols-4  md:px-[2rem] md:space-x-4 md:space-y-4">
         {ExercItems.map((shop,idx)=> (
 <section className="shopCon border p-2 shaow rounded-md ">
     <img src={shop.img} alt="" />
@@ -125,7 +128,7 @@ our health luptas sit fugit, sed quia cuuntur magni dolores some products</p>
 
   
 
-    <button  onClick={() => handleAddToCart(shop)}  className=" bg-yellow-500  w-[30%] flex justify-center items-center text-white rounded-[4px] h-[1.5rem]">
+    <button  onClick={() => handleAddToCart(shop)}  className=" bg-yellow-500 md:w-[15%]  w-[30%] flex justify-center items-center text-white rounded-[4px] h-[1.5rem]">
                  <FaShoppingCart className="ml-2 " />
               </button>
     
