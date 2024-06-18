@@ -69,11 +69,11 @@ didunt ut labore et dolore m et dolore magna aliqua minim niam</p>
           
           <figure key={index} className="bloginmg mt-[1.8rem]">
     <img src={blog.image} className='rounded-[10px] md:object-cover md:h-[200px]' alt="" />
-    <p className='flex text-[20px]  mt-3  '><FaRegCalendarAlt
-      className='text-[1.5rem] text-yellow-500 mr-2' />{blog.date} </p>
-    <h1 className='text-[1.4em] font-semibold leading-[30px] mb-2'>{blog.title}</h1>
-    <p>{blog.venue}</p>
-    <p>{blog.description.substring(0,75)}.... 
+    <p className='flex text-[15px] mb-2 mt-3  '><FaRegCalendarAlt
+      className='text-[18px] text-yellow-500 mr-2' />{blog.date} </p>
+    <h1 className='text-[1.4rem]  font-medium md:text-[1rem] leading-[30px] md:leading-[15px] mb-2'>{blog.title}</h1>
+    <p className='text-[12px] font-semibold'>{blog.venue}</p>
+    <p className='text-[12px]'>{blog.description.substring(0,75)}.... 
     <span className='text-yellow-500 font-semibold'>Read More</span></p>
 </figure>
         ))
