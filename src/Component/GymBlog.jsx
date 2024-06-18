@@ -46,25 +46,29 @@ const GymBlog = () => {
   return (
     <>
 
-    <section className="gymblo mt-[5rem] pb-[2rem]  px-4">
+    <section className="gymblo mt-[5rem] pb-[2rem] md:px-8  px-4">
 
-<section className="title text-center">
+<section className="title text-center md:px-[20rem]  ">
            
 <h1 className='text-[2rem]    text-slate-900 font-bold uppercase s'>
           <span className=' text-yellow-500'>LATEST  </span>BLOG POST<br />
             </h1>
 
-<p className='my-4'>Gym classes dolor sit amet, consectetur adipiscing elit, sed do eiod tempor
+<p className='my-4 '>Gym classes dolor sit amet, consectetur adipiscing elit, sed do eiod tempor
 didunt ut labore et dolore m et dolore magna aliqua minim niam</p>
 
 </section>
+
+<section className="gymblogCon grid md:grid-cols-4 grid-cols-1 md:space-x-4
+">
+
         
         {gymBlogPosts.map((blog, index) => (
 
-
-
-<figure key={index} className="bloginmg mt-[1.8rem]">
-    <img src={blog.image} className='rounded-[10px]' alt="" />
+          
+          
+          <figure key={index} className="bloginmg mt-[1.8rem]">
+    <img src={blog.image} className='rounded-[10px] md:object-cover md:h-[200px]' alt="" />
     <p className='flex text-[20px]  mt-3  '><FaRegCalendarAlt
       className='text-[1.5rem] text-yellow-500 mr-2' />{blog.date} </p>
     <h1 className='text-[1.4em] font-semibold leading-[30px] mb-2'>{blog.title}</h1>
@@ -73,8 +77,9 @@ didunt ut labore et dolore m et dolore magna aliqua minim niam</p>
     <span className='text-yellow-500 font-semibold'>Read More</span></p>
 </figure>
         ))
-            
-    }
+        
+      }
+      </section>
     </section>
     
     

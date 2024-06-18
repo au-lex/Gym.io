@@ -6,14 +6,16 @@ const About = () => {
   return (
     <>
     
-    <section className="about px-4 mt-6">
+    <section className="about px-4 md:mt-[5rem] md:flex md:justify-between md:px-[3rem] mt-6">
 
-        <figcaption className="desc space-y-2 text-slate-800 mb-4">
+
+
+        <figcaption className="desc bgred-500 space-y-2 md:w-[60%] text-slate-800 mb-4">
 
         <h1 className='text-[2rem]    text-yellow-500 font-bold uppercase s'>
           <span className=' text-slate-900'>Best </span> Equipment <br /> & fitness
            <span className='text-slate-900'>  trainers</span> </h1>
-            <p>Gym is very important to maintain our health luptas sit fugit,
+            <p className='md:w-[80%]'>Gym is very important to maintain our health luptas sit fugit,
                  sed quia cuuntur magni dolores eos qui rat ione volupta pleasure rationally 
                  encounter consequences that are extremely </p>
 
@@ -38,11 +40,13 @@ const About = () => {
                     <span className=' uppercase block text-[20px] s font-semibold pt-2'>Intro video</span>
                  </section>
         </figcaption>
-        <div className="abtContainer">
+        <div className="abtContainer bgred-500 md:w-[40%] ">
             <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/gallery/g1.png"
-            className='rounded-[10px]'
+            className='rounded-[10px] md:object-cover md:h-[400px]'
             alt="" />
         </div>
+
+
     </section>
     
     </>
