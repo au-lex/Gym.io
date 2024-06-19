@@ -7,6 +7,7 @@ import Loader from "../../../Component/Loader";
 import ExerciseCard from '../ExerciseCards/ExerCard6';
 import { Link } from 'react-router-dom';
 import { IoReturnUpBack } from "react-icons/io5";
+import { BsChevronLeft } from 'react-icons/bs';
 
 const Waist = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -38,12 +39,15 @@ const Waist = () => {
     <>
       <Header />
       <div className="bg-black pb-[2rem] pt-[6rem]">
+      <div className="back px-2 md:px-[2.5rem] pb-4">
+      <Link to="/exercise" className="flex items-center text-white hover:text-gray-300">
+        <BsChevronLeft className="text-xl mr-" />
+        <span className="text-base font-edium">Back</span>
+      </Link>
+    </div>
 
-      <div className="back px-2 pb-4">
+  <section className="  md:grid md:grid-cols-2 lg:grid-cols-3 md:px-[2rem]">
 
-<Link to="/exercise" className=' bg-yellow-5 text-white  shadow text-[1.3rem] borderyellow-100 w-[2rem] border-2 h-[2rem] 
-  rounded-full flex justify-center items-center'>  <IoReturnUpBack /></Link>
-  </div>
         {data.map((exercise, index) => (
           <ExerciseCard key={index} exercise={exercise} />
         ))}
@@ -57,6 +61,7 @@ const Waist = () => {
             className="text-white bg-yellow-500 rounded-[10px] p-2 w-full flex justify-center"
           />
         </div>
+        </section>
       </div>
       <Footer />
     </>

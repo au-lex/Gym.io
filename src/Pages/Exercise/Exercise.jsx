@@ -67,7 +67,8 @@ const Exercise = () => {
     <section className=" w-full pb-[2rem] ">
         <div className="inp px-3 mb-2 md:px-[3rem]" >
 
-        <input type="text" 
+        <input
+        type="search"
         placeholder="Search Exercises..."
         className="search w-full  rounded-[5px] p-2 placeholder:text-yellow-500 bg-transparent border text-yellow-500 border-yellow-500" />
          <h1 className="text-[1.2rem]    mt-4 text-yellow-500 textcenter  font-bold uppercase s">
