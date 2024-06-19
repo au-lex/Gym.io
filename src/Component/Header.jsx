@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 
   const cart = useSelector(state => state.cart);
-  const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
+  const cartItemCount = cart.length;
 
   const [openNav, SetopenNav] = useState(false)
 
@@ -47,29 +47,29 @@ alt="" />
 
   <a href="/" className='blck flex items-center py-3 px-4 mb-3 text-white hover:text-yellow-500 duration-200 transition-colors'>
     <FaHome className="mr-2" size={20} />
-    <span className="fontbold text-[20px]">Home</span>
+    <span className="fontbold text-[15px]">Home</span>
   </a>
 
   <a href="/shop" className='blok flex items-center  mb-3 py-3 px-4 text-white hover:text-yellow-500 duration-200 transition-colors'>
     <FaShoppingCart className="mr-2" size={20} />
-    <span className="fontbold text-[20px]">Shop</span>
+    <span className="fontbold text-[15px]">Shop</span>
   </a>
 
   <a href="/exercise" className='blok flex items-center  mb-3 py-3 px-4 text-white hover:text-yellow-500 duration-200 transition-colors'>
     <FaDumbbell className="mr-2" size={20} />
-    <span className="fontbold text-[20px]">Exercise</span>
+    <span className="fontbold text-[15px]">Exercise</span>
   </a>
 
   <a href="/contact" className='blo
   ck flex items-center py-3 px-4 text-white  mb-3 hover:text-yellow-500 duration-200 transition-colors'>
     <FaEnvelope className="mr-2" size={20} />
-    <span className="fontbold text-[20px]">Contact</span>
+    <span className="fontbold text-[15px]">Contact</span>
   </a>
 
   <a href="/about" className='blo
   ck flex items-center py-3 px-4 text-white   mb-3 hover:text-yellow-500 duration-200 transition-colors'>
     <FaInfoCircle className="mr-2" size={20} />
-    <span className="fontbold  text-[20px]">About</span>
+    <span className="fontbold  text-[15px]">About</span>
   </a>
 
 </section>

@@ -25,8 +25,8 @@ const HeroCo = () => {
         <h1 className='text-[4rem] md:text-[8rem] md:leading-[7.5rem] leading-[4.5rem] text-white font-bold uppercase s'>
           <span className='text-yellow-500'>time </span> to <br /> get <span className='text-yellow-500'>fit</span> </h1>
         
-        <p className='text-slate-200 md:text-[18px] md:my-[2rem]'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-           Similique, aliquam quaerat rem voluptatem officiis a at officia odit sapiente minima?</p>
+        <p className='text-slate-200 md:text-[16px] md:my-[2rem] md:w-[90%]'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. At pariatur totam tenetur fugit sit illo inventore asperiores rerum ducimus quas, unde ullam quidem iusto odio porro eligendi omnis numquam beatae vel officia harum possimus voluptate eos nostrum? Minima, quasi ad.</p>
 
 
            <Link to ="/exercise" className="btn flex justify-center md:justify-start my-[2rem]">

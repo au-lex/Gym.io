@@ -117,20 +117,20 @@ const Shop = () => {
       <section className="shopCon pt-[4rem]">
         <figure className="img relative">
           <div className="bg-black z-20 w-full inset-0 absolute opacity-80"></div>
-          <img src={imageUrl} className='w-full h-[270px] object-cover' alt="" />
+          <img src={imageUrl} className='w-full h-[270px] md:h-[350px] object-cover' alt="" />
           <div className="z-30 w-full inset-0 absolute">
-            <section className="desc text-center pt-[4rem] px-5">
-              <h1 className='text-[2rem] text-yellow-500 text-center font-bold uppercase'>
+            <section className="desc text-center w-full pt-[4rem] px-5 md:px-[25rem]">
+              <h1 className='text-[2rem] md:text-[4.5rem] text-yellow-500 text-center font-bold uppercase'>
                 <span className='mx-1 text-slate-100'>OUR</span>PRODUCTS
               </h1>
-              <p className='text-white'>We have very professional and expert Instructor and they can very important to maintain our health luptas sit fugit, sed quia cuuntur magni dolores some products</p>
+              <p className='text-white '>We have very professional and expert Instructor and they can very important to maintain our health luptas sit fugit, sed quia cuuntur magni dolores some products</p>
             </section>
           </div>
         </figure>
 
-        <section className="shop grid grid-cols-2">
+        <section className="shop grid grid-cols-2 md:px-8  md:grid-cols-4">
           {ExercItems.map((shop, idx) => (
-            <section key={idx} className="shopCon border p-2 shadow rounded-md">
+            <section key={idx} className="shopCon border md:m-2 p-2 shadow rounded-md">
               <Link to ={`/shop/${shop.name}`} className='block border rounded-[10px]'>
               <img src={shop.img} alt="" />
               </Link>
@@ -139,7 +139,7 @@ const Shop = () => {
                 <p className='font-bold'>${shop.price}</p>
                 <button
                   onClick={() => handleAddToCart(shop)}
-                  className="bg-yellow-500 w-[30%] flex justify-center items-center text-white rounded-[4px] h-[1.5rem]"
+                  className="bg-yellow-500 w-[30%] md:w-[15%] flex justify-center items-center text-white rounded-[4px] h-[1.5rem]"
                 >
                   <FaShoppingCart className="ml-2" />
                 </button>

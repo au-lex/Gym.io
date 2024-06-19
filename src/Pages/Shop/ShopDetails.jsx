@@ -121,14 +121,20 @@ const ShopDetails = () => {
     <Header />
 
 
-<main className='pt-[5rem] px-4 pb-[2rem]'>
+<main className='pt-[5rem] px-4  pb-[2rem]'>
+
+    <section className="contoller md:flex md:my-8 md:justify-center md:px-[10rem] ">
+
+    <section className="con md:shadow md:rounded-[10px] md:border md:w-[60%] md:p-4">
+
+
 <Link to="/shop" className=' bg-yellow-5 my-3 shadow border border-yellow-500 w-[2rem] h-[2rem] 
         rounded-full flex justify-center items-center'>  <IoReturnUpBack /></Link>
         
         <figure className="imgCont  w-full ">
 
       <img src={shop.img} alt={shop.name} 
-      className=' w-full h-[300px] object-cover' />
+      className=' w-full h-[300px] md:h-[400px] object-cover' />
         </figure>
 
         <figcaption className="imgDesc">
@@ -144,8 +150,9 @@ const ShopDetails = () => {
         <button className="add bg-yellow-500 w-full p-2 text-slate-100 rounded-[5px] cursor-pointer">Add to Cart</button>
       </div>
         </figcaption>
+      </section>
+    </section>
     </main>
-
     <Footer />
     </>
   )
