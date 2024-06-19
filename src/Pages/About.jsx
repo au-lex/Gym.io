@@ -18,12 +18,12 @@ const About = () => {
 
         <figure className="img relative">
             <div className="bg-black  z-20 w-full inset-0  absolute opacity-80"></div>
-            <img src={imageUrl} className='w-full h-[250px] object-cover' alt="" />
+            <img src={imageUrl} className='w-full h-[250px]  md:h-[350px] object-cover' alt="" />
             <div className="  z-30 w-full inset-0  absolute ">
 
-<section className=" px-[2rem] desc tex-center pt-12">
+<section className=" px-[2rem] desc text-center md:px-[25rem] pt-12">
 
-            <h1 className='text-[2rem]    text-yellow-500 textcenter  font-bold uppercase s'>
+            <h1 className='text-[2rem] md:text-[5.5rem]    text-yellow-500 textcenter  font-bold uppercase s'>
           <span className='mx-1 text-slate-100'> ABOUT   </span>US <br /> 
             </h1>
           <p className='text-white'>Gym is very important to maintain our health luptas sit fugit,
@@ -42,7 +42,7 @@ sed quia cuuntur magni dolores eos qui rat ione volupta
 
 </h1>
 
-<figure>
+<figure className='md:grid md:grid-cols-2   md:space-x-9 md:items-center md:place-items-center md:px-[2rem]'>
 <figcaption className="desc space-y-2 text-slate-800 mb-4">
 
   <p className='mt-[2rem]  tracking-[.3rem] text-yellow-500 text-[12px] '>WELCOME TO GYMMIE</p>
@@ -74,7 +74,7 @@ sed quia cuuntur magni dolores eos qui rat ione volupta
              my-[1.2rem] rounded-[30px] bg-yellow-500 py-3'>Let start</button>
          </div>
 
-         <section className="watchVid flex space-x-2 ">
+         <section className="watchVid flex md:hidden space-x-2 ">
             <span className="vidBorder flex  items-center justify-center border-4 border-l-4 border-t-4 border-b-4 border-t-yellow-500 border-b-yellow-500 border-l-yellow-500 border-slat-500 w-[3rem] h-[3rem] rounded-full">
 
           
@@ -83,8 +83,11 @@ sed quia cuuntur magni dolores eos qui rat ione volupta
             <span className=' uppercase block text-[20px] s font-semibold pt-2'>Intro video</span>
          </section>
 </figcaption>
-  <div>
-    <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/about/2.png" alt="" />
+
+
+  <div className='md:border  md:rounded-[10px] pt-1 px-1 shadow overflow-hidden border-yellow-500 '>
+    <img src="https://htmldemo.net/zymzoo/zymzoo/assets/img/about/2.png"
+    className='md:h-[450px] w-full object-cover' alt="" />
   </div>
 
 
@@ -94,7 +97,7 @@ sed quia cuuntur magni dolores eos qui rat ione volupta
 {/* banner section */}
 
 
-<section className="abtBanner banner">
+<section className="abtBanner rem] banner">
 
 
  <Banner />

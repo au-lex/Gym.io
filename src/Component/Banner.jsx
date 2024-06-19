@@ -3,7 +3,7 @@ import React from 'react'
 const Banner = () => {
   return (
     <>
-    <main className="banner">
+    <main className="banner ">
 
         <figure className='flex  justify-center pt-[3rem] px-4 space-x-4 mb-[2rem]  l'>
 
