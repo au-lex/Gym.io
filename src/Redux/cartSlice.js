@@ -31,13 +31,17 @@ const cartSlice = createSlice({
     addToCart: (state, action) => {
       const itemExists = state.find(item => item.name === action.payload.name);
       if (itemExists) {
-        itemExists.quantity++;
+        toast.error('Item alreay cart');
+        // I
+        return state;
       } else {
-        state.push({ ...action.payload, quantity: 1 });
-        // alert("New item added to cart");
-         toast.success('New item added to cart')
+        // Item does not exist, add it to cart with quantity 1
+        const newState = [...state, { ...action.payload, quantity: 1 }];
+        toast.success('New item added to cart');
+        saveCartToLocalStorage(newState);
+        return newState;
       }
-      saveCartToLocalStorage(state);
+   
     },
     removeFromCart: (state, action) => {
       const newState = state.filter(item => item.name !== action.payload.name);
@@ -68,3 +72,6 @@ const cartSlice = createSlice({
 export const { addToCart, removeFromCart, incrementQuantity, decrementQuantity } = cartSlice.actions;
 
 export default cartSlice.reducer;
+
+
+
