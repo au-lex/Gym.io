@@ -61,11 +61,11 @@ const Exercise = () => {
 
 <figure className="img relative">
     <div className="bg-black  z-20 w-full inset-0  absolute opacity-80"></div>
-    <img src={imageUrl} className='w-full h-[980px] object-cover' alt="" />
+    <img src={imageUrl} className='w-full h-[980px] md:h-[750px] object-cover' alt="" />
     <div className="  z-30 w-full inset-0  absolute mt-[6rem] ">
 
     <section className=" w-full pb-[2rem] ">
-        <div className="inp px-3 mb-2" >
+        <div className="inp px-3 mb-2 md:px-[3rem]" >
 
         <input type="text" 
         placeholder="Search Exercises..."
@@ -74,23 +74,23 @@ const Exercise = () => {
            Filter<span className="mx-1 text-slate-100"> Exercises </span>
            <br />
          </h1>
-         <p className="text-white text-[12px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur cum quos pariatur,
+         <p className="text-white text-[12px] md:w-[40%]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur cum quos pariatur,
            similique iusto blanditiis sequi debitis mollitia accusamus architecto.</p>
         </div>
-         <section className="container grid grid-cols-2 md:grid-cols-4 ">
+         <section className="cotainer grid grid-cols-2 md:grid-cols-4 md:px-[2rem] md:place-items-center  md:items-center bg-ed-500  ">
            {ExerciseList.map((exer) => (
              <Link
                to={exer.routePath} 
                key={exer.name}
-               className="border-2 border-yellow-500 rounded-[10px] bg-white h-[10rem] overflow-hidden m-2"
+               className="border-2 border-yellow-500 md:h-[15rem] rounded-[10px] bg-white h-[10rem] overflow-hidden m-2"
              >
                <figure className="imgCon relative ">
                  <img
                    src={exer.gifUrl}
                    alt="img-exer"
-                   className="w-full h-[156px] rounded-[10px] object-cover"
+                   className="w-full h-[156px] md:h-[300px]  rounded-[10px] object-cover"
                  />
-                 <figcaption className=" absolute  bottom-0">
+                 <figcaption className=" absolute  bottom-0 md:bottom-[4rem]">
                    <h1 className="text-white bg-yellow-500 text-[12px] capitalize p-1">
                      {exer.name}
                    </h1>

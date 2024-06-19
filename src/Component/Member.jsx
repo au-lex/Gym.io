@@ -14,6 +14,10 @@ const Member = () => {
 didunt ut labore et dolore m et dolore magna aliqua minim niam</p>
 
 
+<section className="md:grid md:grid-cols-2 lg:grid-cols-3 md:space-x-8 md:px-4">
+
+
+
         <figure className="basicCard mb-4  mt-8">
             <section className="w-full h-[40rem] pt-5  pb-5 p-4 bg-white border shadow rounded-[10px]">
 
@@ -129,6 +133,8 @@ didunt ut labore et dolore m et dolore magna aliqua minim niam</p>
 
             </section>
         </figure>
+
+        </section>
 
     </section>
     
