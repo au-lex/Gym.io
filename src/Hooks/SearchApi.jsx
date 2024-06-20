@@ -12,7 +12,7 @@ const ExerciseSearch = () => {
       url: `https://exercisedb.p.rapidapi.com/exercises/name/${exerciseName}`,
       params: {
         offset: '0',
-        limit: '10'
+        limit: '40'
       },
       headers: {
         'x-rapidapi-key': '0b742b75e4msh6068550cfef642bp19d8dbjsn99a277947685',
@@ -61,18 +61,31 @@ const ExerciseSearch = () => {
       {error && <p className="text-red-500 mt-2">{error}</p>}
       <div className="mt-4">
         <h2 className="text-lg font-semibold mb-2">Search Results:</h2>
-        <ul>
-        {exercises && exercises.length > 0 ? (
+       
+       
   <ul>
-    {exercises.map((exercise) => (
-      <li key={exercise.id} className="border-b border-gray-300 py-2">
-        {exercise.name}
-      </li>
-    ))}
+   {exercises && exercises.length > 0 ? (
+  <ul>
+    {exercises.map((exercise) => {
+      console.log(exercise); // Check the structure of exercise object
+      console.log(exercise.gifUrl); // Check the URL of gifUrl
+      return (
+        <li key={exercise.id} className="border-b border-gray-300 py-2">
+          <div>
+            <h3>{exercise.instructions}</h3>
+            <h3>{exercise.name}</h3>
+            <p>{exercise.bodyPart}</p>
+            <img src={exercise.gifUrl} className="w-full h-[300px]" alt="" />
+          </div>
+        </li>
+      );
+    })}
   </ul>
 ) : (
   <p>No exercises found.</p>
 )}
+
+
 
         </ul>
       </div>
