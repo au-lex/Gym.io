@@ -38,11 +38,11 @@ const Cardio = () => {
   return (
     <>
       <Header />
-      <div className="bg-black pb-[2rem] pt-[6rem]">
+      <div className="bgblack pb-[2rem] pt-[6rem]">
 
       <div className="back px-2 md:px-[2.5rem] pb-4">
-      <Link to="/exercise" className="flex items-center text-white hover:text-gray-300">
-        <BsChevronLeft className="text-xl mr-" />
+      <Link to="/exercise" className="flex items-center textwhite hover:text-gray-300">
+        <BsChevronLeft className="text-[12px] mr-" />
         <span className="text-base font-edium">Back</span>
       </Link>
     </div>
