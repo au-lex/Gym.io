@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../../Component/Footer";
 import Header from "../../Component/Header";
 import Loader from "../../Component/Loader";
 import { Link } from "react-router-dom";
+import SearchModal from "../../Component/SearchModal";
+import ExerciseSearch from "../SearchExer/SearchExer";
 
 const Exercise = () => {
+const [IsModal, SetIsModal]  = useState(false)
+
  const ExerciseList = [
    {
      name: "cardio",
@@ -58,9 +62,12 @@ const Exercise = () => {
 
 <section className="">
 
+<SearchModal isopen={IsModal} onclose={()=>SetIsModal(false)} >
 
+<ExerciseSearch />
+</SearchModal >
 <figure className="img relative">
-    <div className="bg-black  z-20 w-full inset-0  absolute opacity-80"></div>
+    <div className="bg-black  z-20 w-full inset-0  absolute opacity-90"></div>
     <img src={imageUrl} className='w-full h-[980px] md:h-[750px] object-cover' alt="" />
     <div className="  z-30 w-full inset-0  absolute mt-[6rem] ">
 
@@ -68,10 +75,13 @@ const Exercise = () => {
         <div className="inp px-3 mb-2 md:px-[3rem]" >
 
         <input
+        onClick={()=>SetIsModal(true) }
         type="search"
         placeholder="Search Exercises..."
         className="search w-full  rounded-[5px] p-2 placeholder:text-yellow-500 bg-transparent border text-yellow-500 border-yellow-500" />
          <h1 className="text-[1.2rem]    mt-4 text-yellow-500 textcenter  font-bold uppercase s">
+
+         
            Filter<span className="mx-1 text-slate-100"> Exercises </span>
            <br />
          </h1>
