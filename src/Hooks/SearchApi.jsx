@@ -1,19 +1,15 @@
-import axios from 'axios';
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const ExerciseSearch = () => {
-  const [exerciseName, setExerciseName] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
   const [exercises, setExercises] = useState([]);
-  const [error, setError] = useState('');
 
-  const fetchExercises = async () => {
+  const searchExercise = async () => {
     const options = {
       method: 'GET',
-      url: `https://exercisedb.p.rapidapi.com/exercises/name/${exerciseName}`,
-      params: {
-        offset: '0',
-        limit: '40'
-      },
+      url: `https://exercisedb.p.rapidapi.com/exercises/name/${searchTerm}`,
+      params: { limit: '10' },
       headers: {
         'x-rapidapi-key': '0b742b75e4msh6068550cfef642bp19d8dbjsn99a277947685',
         'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
@@ -22,72 +18,43 @@ const ExerciseSearch = () => {
 
     try {
       const response = await axios.request(options);
-      
       setExercises(response.data);
-      console.log(response.data);
     } catch (error) {
-      setError(error.message);
+      console.error(error);
     }
   };
 
-  const handleChange = (e) => {
-    setExerciseName(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetchExercises();
-  };
-
   return (
-    <div className="container mx-auto mt-8">
-      <form onSubmit={handleSubmit}>
-        <div className="flex items-center">
-          <input
-            type="text"
-            className="border border-gray-300 rounded px-4 py-2 mr-2"
-            placeholder="Enter exercise name..."
-            value={exerciseName}
-            onChange={handleChange}
-          />
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
-          >
-            Search
-          </button>
-        </div>
-      </form>
-      {error && <p className="text-red-500 mt-2">{error}</p>}
-      <div className="mt-4">
-        <h2 className="text-lg font-semibold mb-2">Search Results:</h2>
-       
-       
-  <ul>
-   {exercises && exercises.length > 0 ? (
-  <ul>
-    {exercises.map((exercise) => {
-      console.log(exercise); // Check the structure of exercise object
-      console.log(exercise.gifUrl); // Check the URL of gifUrl
-      return (
-        <li key={exercise.id} className="border-b border-gray-300 py-2">
-          <div>
-            <h3>{exercise.instructions}</h3>
-            <h3>{exercise.name}</h3>
-            <p>{exercise.bodyPart}</p>
-            <img src={exercise.gifUrl} className="w-full h-[300px]" alt="" />
+    <div className="container mx-auto p-4">
+      <div className="mb-4">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="border p-2 mr-2"
+          placeholder="Enter exercise name"
+        />
+        <button
+          onClick={searchExercise}
+          className="bg-yellow-900 text-white p-2 rounded"
+        >
+          Searchk
+        </button>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {exercises.map((exercise) => (
+          <div key={exercise.id} className="border p-4 rounded">
+            <h2 className="text-xl font-bold mb-2">{exercise.name}</h2>
+            <img
+              src={exercise.gifUrl}
+              alt={exercise.name}
+              className="w-full h-64 object-cover mb-2"
+            />
+            <p><strong>Body Part:</strong> {exercise.bodyPart}</p>
+            <p><strong>Equipment:</strong> {exercise.equipment}</p>
+            <p><strong>Target:</strong> {exercise.target}</p>
           </div>
-        </li>
-      );
-    })}
-  </ul>
-) : (
-  <p>No exercises found.</p>
-)}
-
-
-
-        </ul>
+        ))}
       </div>
     </div>
   );

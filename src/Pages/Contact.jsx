@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import SearchCard from './Exercise/ExerciseCards/SearchCard';
 
 const ExerciseSearch = () => {
   const [exerciseName, setExerciseName] = useState('');
@@ -12,7 +13,7 @@ const ExerciseSearch = () => {
       url: `https://exercisedb.p.rapidapi.com/exercises/name/${exerciseName}`,
       params: {
         offset: '0',
-        limit: '10'
+        limit: '100'
       },
       headers: {
         'x-rapidapi-key': '0b742b75e4msh6068550cfef642bp19d8dbjsn99a277947685',
@@ -40,19 +41,19 @@ const ExerciseSearch = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8">
+    <div className="container mx-auto bg-blac px- mt-8">
       <form onSubmit={handleSubmit}>
-        <div className="flex items-center">
+        <div className="flex items-center px-4 justify-center">
           <input
             type="text"
-            className="border border-gray-300 rounded px-4 py-2 mr-2"
+            className="border w-full border-gray-300 rounded px-4 py-2 mr-2"
             placeholder="Enter exercise name..."
             value={exerciseName}
             onChange={handleChange}
           />
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+            className="bg-blue-900 hover:bg-blue-600 text-white px-4 py-2 rounded"
           >
             Search
           </button>
@@ -64,10 +65,8 @@ const ExerciseSearch = () => {
         <ul>
         {exercises && exercises.length > 0 ? (
   <ul>
-    {exercises.map((exercise) => (
-      <li key={exercise.id} className="border-b border-gray-300 py-2">
-        {exercise.name}
-      </li>
+    {exercises.map((exercise,index) => (
+       <SearchCard key={index} exercise={exercise} />
     ))}
   </ul>
 ) : (
