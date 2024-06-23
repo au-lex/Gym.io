@@ -33,8 +33,9 @@ alt="" />
 
 
 </div>
-<p className='mt-2'>Zymzoo winner dolor sit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-
+<p className='mt-2'>
+We are a gym passionate about helping people achieve their fitness goals in a 
+supportive and motivating environment.
 </p>
 
 <section className="time">

@@ -26,7 +26,9 @@ const HeroCo = () => {
           <span className='text-yellow-500'>time </span> to <br /> get <span className='text-yellow-500'>fit</span> </h1>
         
         <p className='text-slate-200 md:text-[16px] md:my-[2rem] md:w-[90%]'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. At pariatur totam tenetur fugit sit illo inventore asperiores rerum ducimus quas, unde ullam quidem iusto odio porro eligendi omnis numquam beatae vel officia harum possimus voluptate eos nostrum? Minima, quasi ad.</p>
+        Your fitness journey starts here. Let us help you reach your full potential.
+        Achieve your fitness goals with our expert guidance and personalized programs.
+        Join us and discover the joy of a healthier, happier you.</p>
 
 
            <Link to ="/exercise" className="btn flex justify-center md:justify-start my-[2rem]">
