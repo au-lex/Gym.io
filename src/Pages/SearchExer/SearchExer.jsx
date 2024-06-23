@@ -9,7 +9,7 @@ const ExerciseSearch = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchExercises = async () => {
-    setIsLoading(true); // Set loading to true when fetching starts
+    setIsLoading(true); 
     const lowerCaseExerciseName = exerciseName.toLowerCase();
     
    
@@ -67,13 +67,13 @@ const ExerciseSearch = () => {
             className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded"
             disabled={isLoading} 
           >
-            {isLoading ? 'Loading...' : 'Search'} {/* Show Loading text while loading */}
+            {isLoading ? 'Searching...' : 'Search'} {/* Show Loading text while loading */}
           </button>
         </div>
       </form>
-      {error && <p className="text-red-500 mt-2">{error}</p>}
+      {/* {error && <p className="text-red-500 mt-2">{error}</p>} */}
       {isLoading ? (
-        <p className="text-center mt-4">Loading...</p> // Show a loading message or spinner
+        <p className="text-center mt-4">Loading...</p> 
       ) : (
         <div className="mt-4">
           {exercises && exercises.length > 0 ? (

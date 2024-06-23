@@ -15,11 +15,12 @@ const Classes = () => {
           <span className='mx-1 text-slate-900'>SPECIFIC </span> CLASSES <br /> WHAT  
            <span className='text-slate-900 mx-1'>   YOU NEEDS</span> </h1>
 
-           <p className='my-4 md:w-[80%]'>Gym is very important to maintain our health luptas sit fugit, sed quia 
-            cuuntur magni dolores eos qui rat ione volupta pleasure rationally 
-            encounter consequences that are extremely
-            Gym is very important to maintain our health luptas sit fugit, sed quia cuuntur
-            magni dolores eos qui rat ione volupta</p>
+           <p className='my-4 md:w-[80%]'>A gym is much more than just a place to exercise;
+             it's an investment in your overall well-being.
+             Regular physical activity offers a multitude of benefits.
+            Find the perfect workout to fit your goals and interests! 
+            We offer a variety of classes designed to challenge and motivate you.
+</p>
 
 
 

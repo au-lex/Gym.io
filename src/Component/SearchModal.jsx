@@ -9,11 +9,11 @@ const SearchModal = ({isopen, onclose, children}) => {
   return (
 
     <>
-    <div className="fixed pt- inse 0  w-full  bottom-0 z-50 flex overflow-hidden  h-auto bg-white top-0 itemscenter justify-center  overflow-y-auto">
+      {/* <div className="absolute inset-0 bg-black w-full z-50 h-auto opacity-90" ></div> */}
+    <div className="fixed pt- inse 0  w-full   bottom-0 z-50 flex overflowhidden  h-auto bg-white top-0 itemscenter justify-center   overflow-y-scroll">
     <Header />
         
-      <div className="absolute inset-0 bg-black opacity-90" ></div>
-      <div className="bg-white  w-full  pt-[2rem]   z-10">
+      <div className="bgwhite  w-full  pt-[2rem]   z-10">
         <div className="px- md:px-4 mt-8 mb-[rem]">
 
          <button onClick={onclose} className="mt-4 mb-4 font-bold text-red-500 bg-yelow-500 tex-white px-4 py-1 rounded">
@@ -24,7 +24,12 @@ const SearchModal = ({isopen, onclose, children}) => {
        
       </div>
     </div>
-      
+    <section className="cr  fixed top-[30rem] z-20 opacity-40 w-full bg-red-500 ">
+        
+        <h1  className='text-center text-white z-20 p-8 text-[4rem]'>Aulex</h1>
+              
+              
+              </section>
     </>
   )
 }
