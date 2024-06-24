@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import SearchCard from '../Exercise/ExerciseCards/SearchCard';
+import Loader from "../../Component/Loader"
+import { ToastContainer, toast } from 'react-toastify';
 
 const ExerciseSearch = () => {
   const [exerciseName, setExerciseName] = useState('');
@@ -29,22 +31,23 @@ const ExerciseSearch = () => {
     try {
       const response = await axios.request(options);
       setExercises(response.data);
-      setExerciseName(''); // Clear input field
-      setIsLoading(false); // Set loading to false after fetching completes
+      setExerciseName(''); 
+      setIsLoading(false); 
     } catch (error) {
       setError(error.message);
-      setIsLoading(false); // Set loading to false on error
+      setIsLoading(false); 
     }
   };
 
   const handleChange = (e) => {
-    setExerciseName(e.target.value.toLowerCase()); // Convert input to lowercase
+    setExerciseName(e.target.value.toLowerCase()); 
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if(exerciseName.trim() === "") {
-      alert("enter a value");
+      toast.error("input exercise name...")
+      
       return;
       
           }//} Convert 
@@ -67,13 +70,13 @@ const ExerciseSearch = () => {
             className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded"
             disabled={isLoading} 
           >
-            {isLoading ? 'Searching...' : 'Search'} {/* Show Loading text while loading */}
+            {isLoading ? 'Searching...' : 'Search'}
           </button>
         </div>
       </form>
       {/* {error && <p className="text-red-500 mt-2">{error}</p>} */}
       {isLoading ? (
-        <p className="text-center mt-4">Loading...</p> 
+        <p className="text-center mt-4">Searching...</p> 
       ) : (
         <div className="mt-4">
           {exercises && exercises.length > 0 ? (

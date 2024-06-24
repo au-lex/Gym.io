@@ -64,7 +64,7 @@ supportive and motivating environment.
 <span className="desc">
 
 {/* Address */}
-252B, Central Street Main road Belix Tower, New York, USA
+252B, Central Street Main road Belix Tower, Enugu, Nigeria
 </span>
 </section>
 
@@ -81,8 +81,8 @@ supportive and motivating environment.
 
 {/* Address */}
 Phone
-09 (123) 456 789<br />
-09 (987) 654 321
++2348158772715 <br />
++2349061535783
 </span>
 </section>
 
@@ -99,8 +99,9 @@ Phone
 
 {/* Address */}
 
-info@example.com<br />
-www.example.com
+aulex500@gmail.com<br />
+https://gym-io.vercel.app
+
 </span>
 </section>
 
