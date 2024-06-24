@@ -68,10 +68,10 @@ const [IsModal, SetIsModal]  = useState(false)
 </SearchModal >
 <figure className="img relative">
     <div className="bg-black  z-20 w-full inset-0  absolute opacity-90"></div>
-    <img src={imageUrl} className='w-full h-[980px] md:h-[750px] object-cover' alt="" />
+    <img src={imageUrl} className='w-full h-[980px] md:h-[790px] object-cover' alt="" />
     <div className="  z-30 w-full inset-0  absolute mt-[6rem] ">
 
-    <section className=" w-full pb-[2rem] ">
+    <section className=" w-full pb-[4rem] ">
         <div className="inp px-3 mb-2 md:px-[3rem]" >
 
         <input
@@ -85,10 +85,12 @@ const [IsModal, SetIsModal]  = useState(false)
            Filter<span className="mx-1 text-slate-100"> Exercises </span>
            <br />
          </h1>
-         <p className="text-white text-[12px] md:w-[40%]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur cum quos pariatur,
-           similique iusto blanditiis sequi debitis mollitia accusamus architecto.</p>
+         <p className="text-white text-[12px] md:w-[40%]">Filter Exercise Routine for a Sharper Gym Workout
+<span className="">This filter exercise routine targets multiple muscle groups, enhancing strength, stability, and overall fitness.
+   Adjust intensity and weights as needed to challenge yourself appropriately.</span>
+.</p>
         </div>
-         <section className="cotainer grid grid-cols-2 md:grid-cols-4 md:px-[2rem] md:place-items-center  md:items-center bg-ed-500  ">
+         <section className="cotainer grid grid-cols-2 md:grid-cols-4 md:px-[2rem] md:place-items-center   md:items-center bg-ed-500  ">
            {ExerciseList.map((exer) => (
              <Link
                to={exer.routePath} 
