@@ -6,6 +6,7 @@ import VideoApi from '../../../Hooks/VideoApi';
 import Footer from "../../../Component/Footer";
 import Header from "../../../Component/Header";
 import { IoReturnUpBack } from "react-icons/io5";
+import LoaderApi from '../../../Component/LoaderApi';
 
 const LowerLegDetails = () => {
   const { data, isLoading, error } = ExerciseData("/bodyPart/lower legs?limit=40&offset=0");
@@ -20,7 +21,7 @@ const LowerLegDetails = () => {
   }, [data, id]);
 
   if (isLoading) {
-    return <Loader />;
+    return <LoaderApi />;
   }
 
   if (error) {

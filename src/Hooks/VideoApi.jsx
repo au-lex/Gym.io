@@ -7,6 +7,7 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import LoaderApi from '../Component/LoaderApi';
 
 // Import custom CSS
 
@@ -44,7 +45,7 @@ const VideoApi = ({ query }) => {
   }, [query]);
 
   if (loading) {
-    return <> <Loader /></>;
+    return <> <LoaderApi /></>;
   }
 
   if (error) {

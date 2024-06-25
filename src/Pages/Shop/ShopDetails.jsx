@@ -19,92 +19,92 @@ const ShopDetails = () => {
 
 
     const ExercItems = [
-
         {
             "name": "Hand Dumble",
             "price": "500",
             "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/1.jpg",
-            "rating": 3.2
-        
+            "rating": 3.2,
+            "description": "Hand Dumble is a versatile gym accessory used for strength training exercises. It helps in building muscle and enhancing grip strength."
         },
+        {
+            "name": "Fitness Slam Ball",
+            "price": "450",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/2.jpg",
+            "rating": 5,
+            "description": "Fitness Slam Ball is perfect for explosive workout routines. It allows you to perform slams, throws, and other dynamic movements."
+        },
+        {
+            "name": "Pushup Stands",
+            "price": "250",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/7.jpg",
+            "rating": 3.5,
+            "description": "Pushup Stands elevate your hands during push-up exercises, providing a deeper range of motion and reducing wrist strain."
+        },
+        {
+            "name": "Ab Roller",
+            "price": "550",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/9.jpg",
+            "rating": 3,
+            "description": "Ab Roller helps in strengthening the core muscles, especially the abdominal muscles. It is effective for improving stability and balance."
+        },
+        {
+            "name": "Mind Reader Kettlebell",
+            "price": "360",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/5.jpg",
+            "rating": 2,
+            "description": "Mind Reader Kettlebell is a versatile fitness tool for strength and cardio workouts. It allows for swings, lifts, and other dynamic exercises."
+        },
+        {
+            "name": "Cycling Machine",
+            "price": "1500",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/11.jpg",
+            "rating": 5,
+            "description": "Cycling Machine provides a low-impact cardiovascular workout. It simulates outdoor cycling and helps in improving leg strength and endurance."
+        },
+        {
+            "name": "Skipping Rope",
+            "price": "100",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/10.jpg",
+            "rating": 4,
+            "description": "Skipping Rope is a classic exercise tool for cardiovascular fitness and coordination. It is portable and suitable for various fitness levels."
+        },
+        {
+            "name": "Stamina Door Gyms",
+            "price": "500",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/6.jpg",
+            "rating": 3.5,
+            "description": "Stamina Door Gyms are versatile fitness equipment for home workouts. They allow for various upper body exercises like pull-ups and chin-ups."
+        },
+        {
+            "name": "Bluetooth Headphone",
+            "price": "200",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/12.jpg",
+            "rating": 3.5,
+            "description": "Bluetooth Headphones provide wireless audio for workouts, allowing you to enjoy music without the hassle of tangled wires."
+        },
+        {
+            "name": "Workout Tank Top",
+            "price": "300",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/8.jpg",
+            "rating": 3.5,
+            "description": "Workout Tank Tops are comfortable apparel for gym workouts. They are breathable and provide freedom of movement during exercises."
+        },
+        {
+            "name": "Gym Personal Bag",
+            "price": "150",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/3.jpg",
+            "rating": 3.5,
+            "description": "Gym Personal Bags are designed to carry gym essentials like clothes, shoes, and water bottles. They come with compartments for organized storage."
+        },
+        {
+            "name": "Water Bottle",
+            "price": "500",
+            "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/4.jpg",
+            "rating": 3.5,
+            "description": "Water Bottles are essential for staying hydrated during workouts. They are durable and designed to fit in most cup holders."
+        }
+    ];
     
-    {
-        "name": "Fitness Slam Ball",
-        "price": "450",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/2.jpg",
-        "rating": 5
-    
-    },
-    {
-        "name": "Pushup Stands",
-        "price": "250",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/7.jpg",
-        "rating": 3.5
-    
-    },
-    {
-        "name": "Ab Roller",
-        "price": "550",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/9.jpg",
-        "rating": 3
-    
-    },
-    {
-        "name": "Mind Reader Kettlebell",
-        "price": "360",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/5.jpg",
-        "rating": 2
-    
-    },
-    {
-        "name": "Cycling Machine",
-        "price": "1500",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/11.jpg",
-        "rating": 5
-    
-    },
-    {
-        "name": "Skipping Rope",
-        "price": "100",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/10.jpg",
-        "rating": 4
-    
-    },
-    {
-        "name": "Stamina Door Gyms",
-        "price": "500",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/6.jpg",
-        "rating": 3.5
-    },
-    
-    {
-        "name": "Bluetooth Headphone",
-        "price": "200",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/12.jpg",
-        "rating": 3.5
-    },
-    {
-        "name": "Workout Tank Top",
-        "price": "300",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/8.jpg",
-        "rating": 3.5
-    },
-    {
-        "name": "Gym Personal Bag",
-        "price": "150",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/3.jpg",
-        "rating": 3.5
-    },
-    {
-        "name": "Water Bottle",
-        "price": "500",
-        "img": "https://htmldemo.net/zymzoo/zymzoo/assets/img/shop/4.jpg",
-        "rating": 3.5
-    },
-    
-    
-    
-    ]
 
 
     const {id} = useParams();
@@ -142,9 +142,7 @@ const ShopDetails = () => {
       <h1 className='text-[25px] font-semibold'>{shop.name}</h1>
       <p className='font-bold text-yellow-500 text-[18px]'>Price: ${shop.price}</p>
       <p>Rating: {shop.rating}</p>
-      <p className='mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe maiores explicabo 
-        beatae. Quo enim voluptatibus alias cum eum aut.
-         Eligendi sit ipsam reprehenderit, autem esse officia tempora quisquam eius minima?</p>
+      <p className='mt-2'>{shop.description}</p>
 
       <div onClick={()=> handletoCart(shop) } className="btn mt-4">
         <button className="add bg-yellow-500 w-full p-2 text-slate-100 rounded-[5px] cursor-pointer">Add to Cart</button>
