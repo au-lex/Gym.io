@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import SearchCard from '../Exercise/ExerciseCards/SearchCard';
 import Loader from "../../Component/Loader"
 import { ToastContainer, toast } from 'react-toastify';
+import LoaderApi from '../../Component/LoaderApi';
 
 const ExerciseSearch = () => {
   const [exerciseName, setExerciseName] = useState('');
@@ -50,12 +51,12 @@ const ExerciseSearch = () => {
       
       return;
       
-          }//} Convert 
+          }
     fetchExercises();
   };
 
   return (
-    <div className="contato 8">
+    <div className="co 8">
       <form onSubmit={handleSubmit}>
         <div className="flex itemcenter px-4 md:px-8 justify-center">
           <input
@@ -76,7 +77,8 @@ const ExerciseSearch = () => {
       </form>
       {/* {error && <p className="text-red-500 mt-2">{error}</p>} */}
       {isLoading ? (
-        <p className="text-center mt-4">Searching...</p> 
+        // <p className="text-center mt-4">Searching...</p> 
+        <LoaderApi/>
       ) : (
         <div className="mt-4">
           {exercises && exercises.length > 0 ? (
@@ -86,7 +88,15 @@ const ExerciseSearch = () => {
               ))}
             </ul>
           ) : (
-            <p className='px-4 bg-blue-500 text-white'></p>
+
+            <div className="flex justify-center items-center h-64">
+            <p className='text-center text-gray-600 text-xl md:text-2xl px-8 py-4 bg-gray-200 roundedlg shadw-md'>
+              No exercises found. Please try another search.
+            </p>
+          </div>
+          //   <p className='px-4 bg--500 font-bold capitalize  w text-red-500 text-center py-2 rounded'>
+          //   No exercises found...
+          // </p>
           )}
         </div>
       )}

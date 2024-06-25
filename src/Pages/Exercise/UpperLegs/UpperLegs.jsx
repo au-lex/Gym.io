@@ -8,6 +8,7 @@ import ExerciseCard from '../ExerciseCards/ExerCard8';
 import { Link } from 'react-router-dom';
 import { IoReturnUpBack } from "react-icons/io5";
 import { BsChevronLeft } from 'react-icons/bs';
+import LoaderApi from '../../../Component/LoaderApi';
 
 
 const Waist = () => {
@@ -23,7 +24,7 @@ const Waist = () => {
   if (isLoading) {
     return (
       <>
-        <Loader />
+        <LoaderApi />
       </>
     );
   }

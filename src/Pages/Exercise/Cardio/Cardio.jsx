@@ -8,6 +8,7 @@ import ExerciseCard from '../ExerciseCards/ExerCard';
 import { Link } from 'react-router-dom';
 import { IoReturnUpBack } from "react-icons/io5";
 import { BsChevronLeft } from 'react-icons/bs';
+import LoaderApi from '../../../Component/LoaderApi';
 
 const Cardio = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,7 +23,9 @@ const Cardio = () => {
   if (isLoading) {
     return (
       <>
-        <Loader />
+      {/* <p>loading.....</p> */}
+      <LoaderApi />
+        {/* <Loader /> */}
       </>
     );
   }

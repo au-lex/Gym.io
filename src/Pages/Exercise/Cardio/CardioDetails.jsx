@@ -6,6 +6,7 @@ import VideoApi from '../../../Hooks/VideoApi';
 import Footer from "../../../Component/Footer";
 import Header from "../../../Component/Header";
 import { IoReturnUpBack } from "react-icons/io5";
+import LoaderApi from '../../../Component/LoaderApi';
 
 const CardioDetails = () => {
   const { data, isLoading, error } = ExerciseData("/bodyPart/cardio?limit=40&offset=0");
@@ -20,7 +21,7 @@ const CardioDetails = () => {
   }, [data, id]);
 
   if (isLoading) {
-    return <Loader />;
+    return <LoaderApi />;
   }
 
   if (error) {
