@@ -1,20 +1,17 @@
-
-
-
-
-
-import React from 'react';
-
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { IoReturnUpBack } from "react-icons/io5";
 
 
 const SearchCard = ({ exercise }) => {
+  const [showModal, setShowModal] = useState(false);
 
-
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
 
   return (
     <div className="mb-3 mx-2 flex space-x-4 border bg-white p-1 rounded-[10px] overflow-hidden">
-      <figure className="imgCon border rounded-[5px] p-2 border-yellow-500 shadow-2xl">
+      <figure className="imgn border rounded-[5px] p-2 border-yellow-500 shadow-2xl">
         <img
           src={exercise.gifUrl}
           alt="img"
@@ -32,15 +29,36 @@ const SearchCard = ({ exercise }) => {
           Secondary Muscles: {exercise.secondaryMuscles.join(', ')}
         </p>
         <div className="btn">
-        <Link
-  to={`/shoulderDetails/${exercise.id}`}
-  className="bg-yellow-500 block text-center text-white w-full p-2 rounded-[5px]"
->
-  More info..
-</Link>
-
+          <button
+            className="bg-yellow-500 block text-center text-white w-full p-2 rounded-[5px]"
+            onClick={toggleModal}
+          >
+            More info..
+          </button>
         </div>
       </figcaption>
+
+      {showModal && (
+        
+    
+    <section className="fixed left-0 inset-0 w-full h-full bg-gray-800 bg-opacity-75 flex justify-center items-center">
+     <div className="bg- p-4 rounded-lg max-w-lg">
+   
+        <button onClick={toggleModal} className=" bg-yellow-500 mb-4 text-white p-2 rounded-full">
+         <IoReturnUpBack />
+       </button>
+       <figure className="border rounded-md p-2">
+         <img src={exercise.gifUrl} alt="Exercise GIF" className="w-full h-[300px] object-cover" />
+       </figure>
+       <div className="text-gray-700 mt-4">
+         <h3 className="font-semibold text-lg">{exercise.name}</h3>
+         <p className="text-gray-600 mt-2">Target Muscle: {exercise.target}</p>
+         <p className="text-gray-600">Secondary Muscles: {exercise.secondaryMuscles.join(', ')}</p>
+       </div>
+     </div>
+   </section>
+   
+      )}
     </div>
   );
 };
