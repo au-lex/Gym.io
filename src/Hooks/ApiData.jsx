@@ -11,7 +11,7 @@ const ExerciseData = (endpoint = '') => {
       const options = {
         method: 'GET',
         headers: {
-          'x-rapidapi-key': '0b742b75e4msh6068550cfef642bp19d8dbjsn99a277947685',
+          'x-rapidapi-key': '2e8ddde7f5msh8990a7f0b853cdap1ef2fcjsn12fbcc35e36f',
           'x-rapidapi-host': 'exercisedb.p.rapidapi.com',
         },
       };
